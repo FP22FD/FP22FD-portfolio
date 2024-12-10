@@ -1,8 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./pages/home/components/Layout";
-import { ErrorPage } from "./pages/errorPage/ErrorPage";
-import HomePage from "./pages/home/HomePage";
-import PageNotFound from "./pages/notFound/NotFound";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from './pages/home/components/Layout'
+import { ErrorPage } from './pages/errorPage/ErrorPage'
+import HomePage from './pages/home/HomePage'
+import PageNotFound from './pages/notFound/NotFound'
 
 function App() {
   const router = createBrowserRouter([
@@ -11,18 +11,18 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         {
-          path: "/",
+          path: '/',
           element: <HomePage />,
         },
       ],
     },
     {
-      path: "*",
+      path: '*',
       element: <PageNotFound />,
     },
-  ]);
+  ])
 
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />
 }
 
-export default App;
+export default App

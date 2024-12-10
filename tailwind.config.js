@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import { fontFamily } from 'tailwindcss/defaultTheme';
+import { fontFamily } from 'tailwindcss/defaultTheme'
 
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -18,14 +18,14 @@ module.exports = {
       },
       colors: {
         primary: {
-          'blue': '#91b9ca', // Use for hero section background, footer, and buttons
+          blue: '#91b9ca', // Use for hero section background, footer, and buttons
         },
         accent: {
           orangeDark: '#dda778', // Use for small accents, badges, icons
           orangeLight: '#ffebd6', // Use for hover effects, and alternative backgrounds
         },
         typography: {
-          default: '#212427',// Body text, paragraph text, form labels, modal backgrounds
+          default: '#212427', // Body text, paragraph text, form labels, modal backgrounds
           grey: '#5A5E60', // Body text, paragraph text, form labels, modal backgrounds
           white: '#FFFFFF', // Background page, cards, containers, text on dark backgrounds
         },
@@ -82,12 +82,14 @@ module.exports = {
             src: 'url("/src/assets/fonts/Lora/Lora-regular.ttf") format("TrueType")',
           },
         ],
-      });
+      })
 
       addBase({
-        'h1, h2, h3, h4, h5': { fontFamily: 'Playfair Display, Arial, Helvetica, sans-serif' },
-        'body': { fontFamily: 'Lora, Verdana, Tahoma, sans-serif' },
-      });
+        'h1, h2, h3, h4, h5': {
+          fontFamily: 'Playfair Display, Arial, Helvetica, sans-serif',
+        },
+        body: { fontFamily: 'Lora, Verdana, Tahoma, sans-serif' },
+      })
     },
     function ({ addComponents }) {
       addComponents({
@@ -98,12 +100,13 @@ module.exports = {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: '0% 100%',
           transition: 'background-size 0.3s ease-out',
-          backgroundImage: 'linear-gradient(90deg, rgb(145, 185, 202), rgb(145, 185, 202))',
+          backgroundImage:
+            'linear-gradient(90deg, rgb(145, 185, 202), rgb(145, 185, 202))',
         },
         '.highlight:hover': {
           backgroundSize: '100% 20px',
         },
-      });
+      })
     },
     function ({ addUtilities }) {
       addUtilities(
@@ -129,8 +132,8 @@ module.exports = {
             },
           },
         },
-        ['responsive', 'hover']
-      );
+        ['responsive', 'hover'],
+      )
     },
   ],
-};
+}
