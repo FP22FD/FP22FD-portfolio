@@ -13,43 +13,27 @@ module.exports = {
         xxl: '1536px',
       },
       fontFamily: {
-        sans: ['Lora', ...fontFamily.sans], // Lora as the default font
-        display: ['Playfair Display', ...fontFamily.serif], // Playfair Display for display headings text
+        sans: ['Lora', ...fontFamily.sans],
+        display: ['Playfair Display', ...fontFamily.serif],
       },
       colors: {
         primary: {
-          blue: '#91b9ca', // Use for hero section background, footer, and buttons
-        },
-        accent: {
-          orangeDark: '#dda778', // Use for small accents, badges, icons
-          orangeLight: '#ffebd6', // Use for hover effects, and alternative backgrounds
+          defaultBlue: '#AADCEC',
+          lightBlue: '#E7F5F9',
+          darkBlue: '#014361',
+          lightPurple: '#CEB8D7',
+          lightPurple: '#801EE0',
+
         },
         typography: {
-          default: '#212427', // Body text, paragraph text, form labels, modal backgrounds
-          grey: '#5A5E60', // Body text, paragraph text, form labels, modal backgrounds
-          white: '#FFFFFF', // Background page, cards, containers, text on dark backgrounds
+          default: '#212427',
+          grey: '#5A5E60',
+          white: '#FFFFFF',
         },
         neutral: {
-          white: '#FFFFFF', // Backgrounds, cards, containers, text on dark backgrounds
-          ofWhite: '#fafafa', // Backgrounds, cards, containers, text on dark backgrounds
-          default: '#e2e0e0', // Grey color for borders, dividers, and input field backgrounds
-          lighter: '#F9FAFB', // Light section backgrounds and hover states
-          light: '#E9ECEF', // Light section backgrounds and hover states
-          dark: '#ABB5BE', // Secondary text or disabled elements
+          ofWhite: '#fafafa',
+          default: '#e2e0e0',
         },
-        status: {
-          success: {
-            green: '#4D7C0F', // Success messages or positive action icons
-            'green-bg': '#D1E7DD', // Success notification backgrounds
-          },
-          error: {
-            red: '#B91C1C', // Error messages, form validation errors, warning elements
-            'red-bg': '#F8D7DA', // Error notification backgrounds
-          },
-        },
-      },
-      boxShadow: {
-        custom: '0 10px 20px rgba(194, 194, 194, 0.16)', // Custom shadow
       },
     },
   },
@@ -101,7 +85,7 @@ module.exports = {
           backgroundPosition: '0% 100%',
           transition: 'background-size 0.3s ease-out',
           backgroundImage:
-            'linear-gradient(90deg, rgb(145, 185, 202), rgb(145, 185, 202))',
+            'linear-gradient(90deg, rgb(206, 184, 215), rgb(206, 184, 215))',
         },
         '.highlight:hover': {
           backgroundSize: '100% 20px',
@@ -122,7 +106,7 @@ module.exports = {
               left: 0,
               width: '100%',
               height: '2px',
-              backgroundImage: 'linear-gradient(90deg, #91b9ca, #91b9ca)',
+              backgroundImage: 'linear-gradient(90deg, #801EE0, #801EE0)',
               backgroundRepeat: 'no-repeat',
               backgroundSize: '0 100%',
               transition: 'background-size 0.3s ease-out',
