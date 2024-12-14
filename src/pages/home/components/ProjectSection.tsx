@@ -20,7 +20,7 @@ function ProjectsSection() {
 
   return (
     <section className="mt-16 w-full gap-2 text-right text-xs lg:text-sm">
-      <div className="text-primary-darkBlue mb-2 grid grid-cols-3 place-items-start gap-y-2 sm:grid-cols-4 sm:place-items-end md:flex md:place-content-end">
+      <div className="mb-2 grid grid-cols-3 place-items-start gap-y-2 text-primary-darkBlue sm:grid-cols-4 sm:place-items-end md:flex md:place-content-end">
         {[
           'all',
           'react',
@@ -85,7 +85,7 @@ export const projects = [
     githubLink:
       'https://github.com/FP22FD/holidaze-booking/blob/main/README.md',
     websiteLink: 'https://holidaze-booking-ca.netlify.app/',
-    imageSrc: '/src/assets/images/holidazebooking.png',
+    imageSrc: './src/assets/images/holidazebooking.png',
   },
   {
     title: 'ONLINE SHOP',
@@ -102,7 +102,7 @@ export const projects = [
     ],
     githubLink: 'https://github.com/FP22FD/online-shop-CA/blob/main/README.md',
     websiteLink: 'https://onlineshop-ca.netlify.app/',
-    imageSrc: '/src/assets/images/onlineshop.png',
+    imageSrc: './src/assets/images/onlineshop.png',
   },
   {
     title: 'AUCTION HOUSE',
@@ -119,6 +119,6 @@ export const projects = [
     githubLink:
       'https://github.com/FP22FD/Auction-House-SP2-CA/blob/main/README.md',
     websiteLink: 'https://fp22fd.github.io/Auction-House-SP2-CA/',
-    imageSrc: '/src/assets/images/auctionhouse.png',
+    imageSrc: './src/assets/images/auctionhouse.png',
   },
 ]
