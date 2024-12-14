@@ -1,29 +1,26 @@
-import AboutAndSkills from './components/AboutAndSkills'
-import FeaturedSection from './components/FeaturedSection'
-import Skills from './components/Skills'
+import AboutAndSkillsCard from './components/AboutAndSkillsCard'
+import ContactSection from './components/Contact'
+import FeaturedCard from './components/FeaturedCard'
+import ProjectsSection from './components/ProjectSection'
 
 function HomePage() {
   return (
     <div className="grid grid-cols-6 gap-4 lg:grid-cols-12 xl:grid-rows-[auto_auto_auto]">
-      <div
-        id="home"
-        className="col-span-12 flex h-full flex-col bg-orange-50 shadow-md lg:col-span-4"
-      >
-        <FeaturedSection />
+      <div className="col-span-12 flex h-full flex-col shadow-md lg:col-span-4">
+        <FeaturedCard />
       </div>
 
-      <div
-        id="about"
-        className="col-span-12 flex h-full flex-col bg-white shadow-md lg:col-span-8"
-      >
-        <AboutAndSkills />
+      <div className="col-span-12 flex h-full flex-col rounded bg-neutral-ofWhite shadow-md lg:col-span-8">
+        <AboutAndSkillsCard />
       </div>
 
-      <div id="skills" className="col-span-6 hidden">
-        <Skills />
+      <div id="projects" className="col-span-12">
+        <ProjectsSection />
       </div>
 
-      <div id="projects" className="col-span-6 hidden"></div>
+      <div id="contact" className="col-span-12">
+        <ContactSection />
+      </div>
     </div>
   )
 }
