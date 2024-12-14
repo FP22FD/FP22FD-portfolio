@@ -1,22 +1,22 @@
-import profile from '/src/assets/images/profile.png'
-import linkedin from '/src/assets/icons/linkedin.png'
-import github from '/src/assets/icons/github.png'
+import profile from '/src/assets/images/profile2.png'
+import linkedin from '/src/assets/icons/linkedin.svg'
+import github from '/src/assets/icons/github.svg'
 
-function FeaturedSection() {
+function FeaturedCard() {
   return (
-    <div className="h-full w-full bg-accent-orangeLight lg:flex lg:flex-col xl:flex-row">
-      <div className="relative flex h-full w-full gap-2 bg-accent-orangeLight lg:flex-col">
+    <div className="text-primary-darkBlue h-full w-full rounded lg:flex lg:flex-col xl:flex-row">
+      <div className="relative flex h-full w-full gap-2 rounded bg-neutral-ofWhite lg:flex-col">
         <div className="relative h-full w-[60%] lg:w-[88%]">
-          <div className="absolute -left-0 top-0 h-[80%] w-[90%] bg-primary-blue object-contain"></div>
+          <div className="bg-primary-darkBlue absolute -left-0 top-0 h-[80%] w-[90%] object-contain"></div>
           <img
             src={profile}
             alt="Fernanda's profile image"
-            className="relative z-10 m-4 w-full object-cover transition-all duration-300 hover:grayscale hover:filter"
+            className="relative z-10 m-4 w-full object-cover grayscale transition-all duration-300 hover:grayscale-0 hover:filter"
           />
         </div>
 
-        <div className="flex h-full w-full flex-col sm:place-content-center">
-          <div className="text-center text-sm sm:space-y-4 sm:text-base md:text-lg lg:mb-2">
+        <div className="flex h-full w-full flex-col place-content-center">
+          <div className="md:text-md text-center text-sm sm:space-y-4 sm:p-4 md:text-base lg:mb-2">
             <h2 className="text-lg font-bold sm:text-2xl md:text-3xl">
               Fernanda Gomes
             </h2>
@@ -56,4 +56,4 @@ function FeaturedSection() {
   )
 }
 
-export default FeaturedSection
+export default FeaturedCard
