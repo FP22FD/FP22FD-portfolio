@@ -9,6 +9,9 @@ import tailwindIcon from '/src/assets/icons/tailwindgreen.svg'
 import cypressIcon from '/src/assets/icons/cypressgreen.svg'
 import testunitIcon from '/src/assets/icons/e2e.svg'
 import typescriptIcon from '/src/assets/icons/typescriptgreen.svg'
+import holidaze from '/src/assets/images/holidazebooking.png'
+import online from '/src/assets/images/onlineshop.png'
+import auction from '/src/assets/images/auctionhouse.png'
 
 function ProjectsSection() {
   const [filter, setFilter] = useState('all')
@@ -85,7 +88,7 @@ export const projects = [
     githubLink:
       'https://github.com/FP22FD/holidaze-booking/blob/main/README.md',
     websiteLink: 'https://holidaze-booking-ca.netlify.app/',
-    imageSrc: './src/assets/images/holidazebooking.png',
+    imageSrc: holidaze,
   },
   {
     title: 'ONLINE SHOP',
@@ -102,7 +105,7 @@ export const projects = [
     ],
     githubLink: 'https://github.com/FP22FD/online-shop-CA/blob/main/README.md',
     websiteLink: 'https://onlineshop-ca.netlify.app/',
-    imageSrc: './src/assets/images/onlineshop.png',
+    imageSrc: online,
   },
   {
     title: 'AUCTION HOUSE',
@@ -119,6 +122,6 @@ export const projects = [
     githubLink:
       'https://github.com/FP22FD/Auction-House-SP2-CA/blob/main/README.md',
     websiteLink: 'https://fp22fd.github.io/Auction-House-SP2-CA/',
-    imageSrc: './src/assets/images/auctionhouse.png',
+    imageSrc: auction,
   },
 ]
