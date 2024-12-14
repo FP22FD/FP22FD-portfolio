@@ -1,15 +1,15 @@
-import Skills from './Skills'
+import SkillsCard from './Skills'
 
-function AboutAndSkills() {
+function AboutAndSkillsCard() {
   return (
-    <div className="flex h-full flex-col">
-      <div className="space-y-4 bg-neutral-white p-4">
+    <div className="flex h-full flex-col justify-between rounded">
+      <div className="text-primary-darkBlue h-full space-y-4 rounded bg-neutral-ofWhite p-4">
         <h2 className="mb-2 text-xl font-bold">ABOUT ME</h2>
-        <p>Hi!</p>
+        <p>Hi there!</p>
         <p>
-          I recently completed the Front-End course at the Noroff Institute in
-          Oslo, Norway. During the course, I focused on Design, HTML, CSS, and
-          JavaScript, React, TypeScript, Bootstrap, Tailwind, UI/UX, and Figma.
+          I' m motivated front-end developer based in Oslo, Norway. My tech
+          stack at work is Design, HTML, CSS, React, TypeScript, JavaScript
+          Bootstrap, Tailwind, UI/UX, and Figma.
         </p>
         <p>
           I enjoy focusing on the creative side of a project, believing that
@@ -24,22 +24,19 @@ function AboutAndSkills() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit My Etsy Store"
-            className="highlight ml-2"
+            className="highlight ml-2 hover:font-bold"
           >
             digital Store
           </a>
           .
         </p>
-        <p>
-          Feel free to contact me. I will try to respond as soon as possible.
-        </p>
       </div>
 
-      <div className="mt-2">
-        <Skills />
+      <div className="mt-2 h-full place-content-end">
+        <SkillsCard />
       </div>
     </div>
   )
 }
 
-export default AboutAndSkills
+export default AboutAndSkillsCard
