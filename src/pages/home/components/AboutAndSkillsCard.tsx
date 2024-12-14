@@ -1,4 +1,4 @@
-import SkillsCard from './Skills'
+import Skills from './Skills'
 
 function AboutAndSkillsCard() {
   return (
@@ -33,7 +33,7 @@ function AboutAndSkillsCard() {
       </div>
 
       <div className="mt-2 h-full place-content-end">
-        <SkillsCard />
+        <Skills />
       </div>
     </div>
   )
