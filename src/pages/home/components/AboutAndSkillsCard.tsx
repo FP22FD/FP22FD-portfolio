@@ -3,13 +3,14 @@ import Skills from './Skills'
 function AboutAndSkillsCard() {
   return (
     <div className="flex h-full flex-col justify-between rounded">
-      <div className="text-primary-darkBlue h-full space-y-4 rounded bg-neutral-ofWhite p-4">
+      <div className="h-full space-y-4 rounded bg-neutral-ofWhite p-4 text-primary-darkBlue">
         <h2 className="mb-2 text-xl font-bold">ABOUT ME</h2>
         <p>Hi there!</p>
         <p>
-          I' m motivated front-end developer based in Oslo, Norway. My tech
-          stack at work is Design, HTML, CSS, React, TypeScript, JavaScript
-          Bootstrap, Tailwind, UI/UX, and Figma.
+          I'm motivated front-end developer based in Oslo, Norway. My tech stack
+          is React, TypeScript, semantic and accessible HTML, modern CSS,
+          JavaScript, Bootstrap, Tailwind, UI/UX, unit/e2e testing, and Figma
+          prototyping.
         </p>
         <p>
           I enjoy focusing on the creative side of a project, believing that
