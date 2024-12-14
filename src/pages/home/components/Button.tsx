@@ -2,7 +2,9 @@ import { NavLink } from 'react-router-dom'
 
 interface Props {
   label: string
-  onClick?: () => void
+  onClick?: (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+  ) => void
   type: 'button' | 'submit' | 'reset'
   variant?: 'primary' | 'secondary'
   size?: 'small' | 'medium' | 'large'
@@ -29,9 +31,9 @@ const Button = ({
   const baseClasses = 'rounded transition-colors duration-200 font-bold'
 
   const variantClasses: { [key in 'primary' | 'secondary']: string } = {
-    primary: 'bg-primary-blue text-typography-white hover:scale-105',
+    primary: 'bg-primary-darkBlue text-typography-white hover:scale-110',
     secondary:
-      'border border-neutral-default text-typography-grey bg-neutral-white hover:scale-105',
+      'border border-neutral-default text-typography-grey bg-neutral-ofWhite hover:scale-105',
   }
 
   const sizeClasses: { [key in 'small' | 'medium' | 'large']: string } = {
