@@ -7,12 +7,12 @@ function Footer() {
       role="contentinfo"
       aria-label="Footer section"
     >
-      <div className="bg-primary-defaultBlue text-primary-darkBlue flex flex-col items-center">
-        <div className="flex flex-col items-center p-2 text-center text-xs font-medium">
+      <div className="flex flex-col items-center bg-primary-defaultBlue text-primary-darkBlue">
+        <div className="flex flex-col items-center p-2 text-center text-xs font-medium md:text-sm">
           <p>
             Developed and designed with
             <PiHeartStraightFill
-              className="text-primary-darkBlue mx-2 inline"
+              className="mx-2 inline text-primary-darkBlue"
               aria-label="heart icon"
             />
             <span>by Fernanda Gomes</span>

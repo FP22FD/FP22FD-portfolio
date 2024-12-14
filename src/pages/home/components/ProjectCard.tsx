@@ -25,11 +25,11 @@ function ProjectCard({
   imageSrc,
 }: Props) {
   return (
-    <div className="text-primary-darkBlue flex w-full flex-col justify-between rounded bg-neutral-ofWhite p-4 shadow-lg">
+    <div className="flex w-full flex-col justify-between rounded bg-neutral-ofWhite p-4 text-primary-darkBlue shadow-lg">
       <div className="mb-4 flex h-full flex-col justify-between text-start">
         <div>
           <h2 className="mb-2 text-lg font-bold">{title}</h2>
-          <p className="mb-4 text-sm">{description}</p>
+          <p className="mb-4 text-sm md:text-base">{description}</p>
         </div>
 
         <div className="flex flex-col items-end justify-end gap-1">
