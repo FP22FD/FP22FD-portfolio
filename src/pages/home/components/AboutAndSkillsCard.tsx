@@ -9,8 +9,8 @@ function AboutAndSkillsCard() {
         <p>
           I'm motivated front-end developer based in Oslo, Norway. My tech stack
           is React, TypeScript, semantic and accessible HTML, modern CSS,
-          JavaScript, Bootstrap, Tailwind, UI/UX, unit/e2e testing, and Figma
-          prototyping.
+          JavaScript, Bootstrap, Tailwind, UI/UX, CI/CD, unit/e2e testing, and
+          Figma prototyping.
         </p>
         <p>
           I enjoy focusing on the creative side of a project, believing that
