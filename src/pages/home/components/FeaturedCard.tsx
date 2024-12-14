@@ -1,4 +1,4 @@
-import profile from '/src/assets/images/profile2.png'
+import profile from '/src/assets/images/profile.png'
 import linkedin from '/src/assets/icons/linkedin.svg'
 import github from '/src/assets/icons/github.svg'
 
