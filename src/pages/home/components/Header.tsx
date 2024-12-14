@@ -10,8 +10,8 @@ function Header() {
   }
 
   return (
-    <header className="fixed left-0 top-0 z-40 w-full bg-neutral-white shadow-sm">
-      <nav className="flex w-full border-b p-5" aria-label="Main navigation">
+    <header className="fixed left-0 top-0 z-40 w-full bg-neutral-ofWhite shadow-sm">
+      <nav className="flex w-full px-6 md:p-5" aria-label="Main navigation">
         <div className="hidden w-full md:block">
           <MenuDesktop />
         </div>
