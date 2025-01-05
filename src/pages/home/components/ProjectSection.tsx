@@ -125,7 +125,7 @@ function ProjectsSection() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xxl:grid-cols-3">
         {filteredProjects.map((project, index) => (
           <ProjectCard
             key={index}
