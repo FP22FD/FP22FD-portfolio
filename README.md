@@ -39,3 +39,75 @@ The main goal of this repository is to document three prior submissions from the
 - can correctly document a project
 - can create a personal GitHub profile README
 - has created a personal portfolio webpage
+
+## Development Setup
+
+### Prerequisites
+
+Ensure the following tools are installed on your system:
+
+- [Node.js and npm](https://nodejs.org/)
+- [Git](https://git-scm.com/)
+
+### Clone the Repository
+
+1. Clone the repository and navigate to the project folder:
+
+   ```bash
+   git clone https://github.com/FP22FD/FP22FD-portfolio.git
+   cd FP22FD-portfolio
+
+   ```
+
+2. Install the required dependencies
+
+   ```bash
+   npm install
+
+   ```
+
+3. Start Development Server
+
+   ```bash
+   npm run dev
+
+   ```
+
+4. Generate a production-ready build
+   ```bash
+   npm run build
+   ```
+
+### Deploying to GitHub Pages
+
+1. Open the Settings of this repository on GitHub.
+2. Go to Pages under the Code and Automation tab.
+3. Select the gh-pages (or main) branch and the /root directory for deployment.
+4. Save changes and wait for the deployment to complete.
+
+### Automated Deployment Using gh-pages
+
+1. Install the gh-pages package
+
+   ```bash
+   npm install gh-pages --save-dev
+
+   ```
+
+2. Add the following scripts to `package.json`:
+
+   ```json
+   {
+     "homepage": "https://fp22fd.github.io/FP22FD-portfolio/",
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d dist"
+     }
+   }
+   ```
+
+3. Deploy using:
+   ```bash
+   npm run predeploy
+   npn run deploy
+   ```
