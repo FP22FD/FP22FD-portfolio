@@ -22,7 +22,7 @@ interface Props {
   icons: Icon[];
   githubLink: string;
   websiteLink: string;
-  imageSrc: string | ImageType[];
+  images: ImageType[];
   activeFilter: string;
 }
 
@@ -34,14 +34,10 @@ function ProjectCard({
   icons,
   githubLink,
   websiteLink,
-  imageSrc,
+  images,
 }: Props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string>('');
-
-  const images = Array.isArray(imageSrc)
-    ? imageSrc
-    : [{ src: imageSrc, description: '' }];
 
   const handleImageClick = (src: string) => {
     setSelectedImage(src);
@@ -55,9 +51,6 @@ function ProjectCard({
   const sliderSettings = {
     customPaging: (i: number) => {
       const image = images[i];
-      if (!image) {
-        return <></>;
-      }
 
       return (
         <a onClick={() => handleImageClick(image.src)}>

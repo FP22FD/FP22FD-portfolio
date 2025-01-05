@@ -1,25 +1,25 @@
-import { useState } from 'react'
-import ProjectCard from './ProjectCard'
-import htmlIcon from '/src/assets/icons/htmlgreen.svg'
-import cssIcon from '/src/assets/icons/cssgreen.svg'
-import reactIcon from '/src/assets/icons/reactgreen.svg'
-import javascriptIcon from '/src/assets/icons/javascriptgreen.svg'
-import bootstrapIcon from '/src/assets/icons/bootstrapgreen.svg'
-import tailwindIcon from '/src/assets/icons/tailwindgreen.svg'
-import cypressIcon from '/src/assets/icons/cypressgreen.svg'
-import testunitIcon from '/src/assets/icons/e2e.svg'
-import typescriptIcon from '/src/assets/icons/typescriptgreen.svg'
-import holidaze from '/src/assets/images/process/holidazebooking.png'
-import holidazeDesign from '/src/assets/images/process/holidazeFigmaDS.png'
-import holidazePrototype from '/src/assets/images/process/holidazeFigmaPRO.png'
-import holidazePostman from '/src/assets/images/process/holidazePostman.png'
-import holidazetest from '/src/assets/images/process/holidazeTest.png'
-import online from '/src/assets/images/process/onlineshop.png'
-import postmanOnline from '/src/assets/images/process/onlinePostman.png'
-import onlinetest from '/src/assets/images/process/onlineTest.png'
-import auction from '/src/assets/images/process/auctionhouse.png'
-import auctionDesign from '/src/assets/images/process/auctionFigmaDS.png'
-import auctionPrototype from '/src/assets/images/process/auctionFigmaPRO.png'
+import { useState } from 'react';
+import ProjectCard from './ProjectCard';
+import htmlIcon from '/src/assets/icons/htmlgreen.svg';
+import cssIcon from '/src/assets/icons/cssgreen.svg';
+import reactIcon from '/src/assets/icons/reactgreen.svg';
+import javascriptIcon from '/src/assets/icons/javascriptgreen.svg';
+import bootstrapIcon from '/src/assets/icons/bootstrapgreen.svg';
+import tailwindIcon from '/src/assets/icons/tailwindgreen.svg';
+import cypressIcon from '/src/assets/icons/cypressgreen.svg';
+import testunitIcon from '/src/assets/icons/e2e.svg';
+import typescriptIcon from '/src/assets/icons/typescriptgreen.svg';
+import holidaze from '/src/assets/images/process/holidazebooking.png';
+import holidazeDesign from '/src/assets/images/process/holidazeFigmaDS.png';
+import holidazePrototype from '/src/assets/images/process/holidazeFigmaPRO.png';
+import holidazePostman from '/src/assets/images/process/holidazePostman.png';
+import holidazetest from '/src/assets/images/process/holidazeTest.png';
+import online from '/src/assets/images/process/onlineshop.png';
+import postmanOnline from '/src/assets/images/process/onlinePostman.png';
+import onlinetest from '/src/assets/images/process/onlineTest.png';
+import auction from '/src/assets/images/process/auctionhouse.png';
+import auctionDesign from '/src/assets/images/process/auctionFigmaDS.png';
+import auctionPrototype from '/src/assets/images/process/auctionFigmaPRO.png';
 
 export const projects = [
   {
@@ -88,15 +88,15 @@ export const projects = [
       { src: auctionPrototype, description: 'Prototype | Figma' },
     ],
   },
-]
+];
 
 function ProjectsSection() {
-  const [filter, setFilter] = useState('all')
+  const [filter, setFilter] = useState('all');
 
   const filteredProjects =
     filter === 'all'
       ? projects
-      : projects.filter((project) => project.tags.includes(filter))
+      : projects.filter((project) => project.tags.includes(filter));
 
   return (
     <section className="mt-16 w-full gap-2 text-right text-xs lg:text-sm">
@@ -126,9 +126,9 @@ function ProjectsSection() {
       </div>
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xxl:grid-cols-3">
-        {filteredProjects.map((project, index) => (
+        {filteredProjects.map((project) => (
           <ProjectCard
-            key={index}
+            key={project.title}
             title={project.title}
             description={project.description}
             icons={(project.icons ?? []).filter(
@@ -137,13 +137,13 @@ function ProjectsSection() {
             )}
             githubLink={project.githubLink}
             websiteLink={project.websiteLink}
-            imageSrc={project.imageSrc}
+            images={project.imageSrc}
             activeFilter={filter}
           />
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default ProjectsSection
+export default ProjectsSection;
