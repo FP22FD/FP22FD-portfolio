@@ -1,32 +1,32 @@
-import githubIcon from '/src/assets/icons/githubrounded.svg'
-import webIcon from '/src/assets/icons/web.svg'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import githubIcon from '/src/assets/icons/githubrounded.svg';
+import webIcon from '/src/assets/icons/web.svg';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import '/src/customSlick.css'
+import '/src/customSlick.css';
 
 interface Icon {
-  src: string
-  description: string
+  src: string;
+  description: string;
 }
 
 interface ImageType {
-  src: string
-  description: string
+  src: string;
+  description: string;
 }
 
 interface Props {
-  title: string
-  description: string
-  icons: Icon[]
-  githubLink: string
-  websiteLink: string
-  imageSrc: string | ImageType[]
-  activeFilter: string
+  title: string;
+  description: string;
+  icons: Icon[];
+  githubLink: string;
+  websiteLink: string;
+  imageSrc: string | ImageType[];
+  activeFilter: string;
 }
 
-import { useState } from 'react'
+import { useState } from 'react';
 
 function ProjectCard({
   title,
@@ -36,25 +36,29 @@ function ProjectCard({
   websiteLink,
   imageSrc,
 }: Props) {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [selectedImage, setSelectedImage] = useState<string>('')
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string>('');
 
   const images = Array.isArray(imageSrc)
     ? imageSrc
-    : [{ src: imageSrc, description: '' }]
+    : [{ src: imageSrc, description: '' }];
 
   const handleImageClick = (src: string) => {
-    setSelectedImage(src)
-    setIsModalOpen(true)
-  }
+    setSelectedImage(src);
+    setIsModalOpen(true);
+  };
 
   const handleCloseModal = () => {
-    setIsModalOpen(false)
-  }
+    setIsModalOpen(false);
+  };
 
   const sliderSettings = {
     customPaging: (i: number) => {
-      const image = images[i]
+      const image = images[i];
+      if (!image) {
+        return <></>;
+      }
+
       return (
         <a onClick={() => handleImageClick(image.src)}>
           <img
@@ -63,7 +67,7 @@ function ProjectCard({
             className="mt-2 h-16 object-cover"
           />
         </a>
-      )
+      );
     },
     appendDots: (dots: JSX.Element) => (
       <div
@@ -86,7 +90,7 @@ function ProjectCard({
     autoplaySpeed: 3000,
     fade: true,
     pauseOnHover: true,
-  }
+  };
 
   return (
     <div className="flex w-full flex-col justify-between rounded bg-neutral-ofWhite p-4 text-primary-darkBlue shadow-lg">
@@ -150,14 +154,14 @@ function ProjectCard({
         <Modal imageSrc={selectedImage} closeModal={handleCloseModal} />
       )}
     </div>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;
 
 interface ModalProps {
-  imageSrc: string
-  closeModal: () => void
+  imageSrc: string;
+  closeModal: () => void;
 }
 
 const Modal = ({ imageSrc, closeModal }: ModalProps) => {
@@ -173,5 +177,5 @@ const Modal = ({ imageSrc, closeModal }: ModalProps) => {
         <img src={imageSrc} alt="Enlarged project" className="object-contain" />
       </div>
     </div>
-  )
-}
+  );
+};
