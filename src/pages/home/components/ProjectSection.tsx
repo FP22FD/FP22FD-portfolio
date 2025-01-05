@@ -9,9 +9,86 @@ import tailwindIcon from '/src/assets/icons/tailwindgreen.svg'
 import cypressIcon from '/src/assets/icons/cypressgreen.svg'
 import testunitIcon from '/src/assets/icons/e2e.svg'
 import typescriptIcon from '/src/assets/icons/typescriptgreen.svg'
-import holidaze from '/src/assets/images/holidazebooking.png'
-import online from '/src/assets/images/onlineshop.png'
-import auction from '/src/assets/images/auctionhouse.png'
+import holidaze from '/src/assets/images/process/holidazebooking.png'
+import holidazeDesign from '/src/assets/images/process/holidazeFigmaDS.png'
+import holidazePrototype from '/src/assets/images/process/holidazeFigmaPRO.png'
+import holidazePostman from '/src/assets/images/process/holidazePostman.png'
+import holidazetest from '/src/assets/images/process/holidazeTest.png'
+import online from '/src/assets/images/process/onlineshop.png'
+import postmanOnline from '/src/assets/images/process/onlinePostman.png'
+import onlinetest from '/src/assets/images/process/onlineTest.png'
+import auction from '/src/assets/images/process/auctionhouse.png'
+import auctionDesign from '/src/assets/images/process/auctionFigmaDS.png'
+import auctionPrototype from '/src/assets/images/process/auctionFigmaPRO.png'
+
+export const projects = [
+  {
+    title: 'HOLIDAZE BOOKING',
+    description:
+      'This is Project Exam 2 assignment. Holidaze Booking is a booking site for hotels, cabins, etc., where registered users can book accommodations and manage their bookings, while admins can manage accommodations and bookings.',
+    tags: ['react', 'typescript', 'tailwind', 'unit test', 'html', 'css'],
+    icons: [
+      { src: reactIcon, description: 'React Framework' },
+      { src: tailwindIcon, description: 'Tailwind CSS' },
+      { src: typescriptIcon, description: 'Typescript' },
+      { src: testunitIcon, description: 'Unit Test' },
+      { src: htmlIcon, description: 'HTML' },
+      { src: cssIcon, description: 'CSS' },
+    ],
+    githubLink:
+      'https://github.com/FP22FD/holidaze-booking/blob/main/README.md',
+    websiteLink: 'https://holidaze-booking-ca.netlify.app/',
+    imageSrc: [
+      { src: holidaze, description: 'Project Implemented | Live Demo' },
+      { src: holidazeDesign, description: 'Design System | Figma' },
+      { src: holidazePrototype, description: 'Prototype | Figma' },
+      { src: holidazePostman, description: 'Postman | API' },
+      { src: holidazetest, description: 'Playwright Tests | Unit Test' },
+    ],
+  },
+  {
+    title: 'ONLINE SHOP',
+    description:
+      'This is JavaScript Frameworks assignment. Online Shop is a React-based shopping cart application that allows users to add and remove items from their cart.',
+    tags: ['react', 'typescript', 'tailwind', 'unit test', 'html', 'css'],
+    icons: [
+      { src: reactIcon, description: 'React Framework' },
+      { src: tailwindIcon, description: 'Tailwind CSS' },
+      { src: typescriptIcon, description: 'Typescript' },
+      { src: testunitIcon, description: 'Unit Test' },
+      { src: htmlIcon, description: 'HTML' },
+      { src: cssIcon, description: 'CSS' },
+    ],
+    githubLink: 'https://github.com/FP22FD/online-shop-CA/blob/main/README.md',
+    websiteLink: 'https://onlineshop-ca.netlify.app/',
+    imageSrc: [
+      { src: online, description: 'Project Implemented | Live Demo' },
+      { src: postmanOnline, description: 'Postman | API' },
+      { src: onlinetest, description: 'Console | Unit Test' },
+    ],
+  },
+  {
+    title: 'AUCTION HOUSE',
+    description:
+      'This is Semester Project 2 assignment. Auction House is an online auction platform where users can list items for auction, place bids, and manage their profiles.',
+    tags: ['javascript', 'bootstrap', 'cypress', 'html', 'css'],
+    icons: [
+      { src: javascriptIcon, description: 'Javascript' },
+      { src: bootstrapIcon, description: 'Bootstrap' },
+      { src: cypressIcon, description: 'Cypress Testing' },
+      { src: htmlIcon, description: 'HTML' },
+      { src: cssIcon, description: 'CSS' },
+    ],
+    githubLink:
+      'https://github.com/FP22FD/Auction-House-SP2-CA/blob/main/README.md',
+    websiteLink: 'https://fp22fd.github.io/Auction-House-SP2-CA/',
+    imageSrc: [
+      { src: auction, description: 'Project Implemented | Live Demo' },
+      { src: auctionDesign, description: 'Design System | Figma' },
+      { src: auctionPrototype, description: 'Prototype | Figma' },
+    ],
+  },
+]
 
 function ProjectsSection() {
   const [filter, setFilter] = useState('all')
@@ -36,7 +113,7 @@ function ProjectsSection() {
         ].map((tag) => (
           <button
             key={tag}
-            className={` ${
+            className={`${
               filter === tag
                 ? 'border-primary-darkBlue bg-primary-darkBlue font-semibold text-typography-white'
                 : 'bg-neutral-ofWhite'
@@ -48,7 +125,7 @@ function ProjectsSection() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xxl:grid-cols-3">
         {filteredProjects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -70,58 +147,3 @@ function ProjectsSection() {
 }
 
 export default ProjectsSection
-
-export const projects = [
-  {
-    title: 'HOLIDAZE BOOKING',
-    description:
-      'This is Project Exam 2 assignment. Holidaze Booking is a booking site for hotels, cabins, etc., where registered users can book accommodations and manage their bookings, while admins can manage accommodations and bookings.',
-    tags: ['react', 'typescript', 'tailwind', 'unit test', 'html', 'css'],
-    icons: [
-      { src: reactIcon, description: 'React Framework' },
-      { src: tailwindIcon, description: 'Tailwind CSS' },
-      { src: typescriptIcon, description: 'Typescript' },
-      { src: testunitIcon, description: 'Unit Test' },
-      { src: htmlIcon, description: 'HTML' },
-      { src: cssIcon, description: 'CSS' },
-    ],
-    githubLink:
-      'https://github.com/FP22FD/holidaze-booking/blob/main/README.md',
-    websiteLink: 'https://holidaze-booking-ca.netlify.app/',
-    imageSrc: holidaze,
-  },
-  {
-    title: 'ONLINE SHOP',
-    description:
-      'This is JavaScript Frameworks assignment. Online Shop is a React-based shopping cart application that allows users to add and remove items from their cart.',
-    tags: ['react', 'typescript', 'tailwind', 'unit test', 'html', 'css'],
-    icons: [
-      { src: reactIcon, description: 'React Framework' },
-      { src: tailwindIcon, description: 'Tailwind CSS' },
-      { src: typescriptIcon, description: 'Typescript' },
-      { src: testunitIcon, description: 'Unit Test' },
-      { src: htmlIcon, description: 'HTML' },
-      { src: cssIcon, description: 'CSS' },
-    ],
-    githubLink: 'https://github.com/FP22FD/online-shop-CA/blob/main/README.md',
-    websiteLink: 'https://onlineshop-ca.netlify.app/',
-    imageSrc: online,
-  },
-  {
-    title: 'AUCTION HOUSE',
-    description:
-      'This is Semester Project 2 assignment. Auction House is an online auction platform where users can list items for auction, place bids, and manage their profiles.',
-    tags: ['javascript', 'bootstrap', 'cypress', 'html', 'css'],
-    icons: [
-      { src: javascriptIcon, description: 'Javascript' },
-      { src: bootstrapIcon, description: 'Tailwind CSS' },
-      { src: cypressIcon, description: 'Cypress Testing' },
-      { src: htmlIcon, description: 'HTML' },
-      { src: cssIcon, description: 'CSS' },
-    ],
-    githubLink:
-      'https://github.com/FP22FD/Auction-House-SP2-CA/blob/main/README.md',
-    websiteLink: 'https://fp22fd.github.io/Auction-House-SP2-CA/',
-    imageSrc: auction,
-  },
-]
