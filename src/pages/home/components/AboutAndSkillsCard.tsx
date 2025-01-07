@@ -1,4 +1,4 @@
-import Skills from './Skills'
+import Skills from './Skills';
 
 function AboutAndSkillsCard() {
   return (
@@ -17,9 +17,14 @@ function AboutAndSkillsCard() {
           fonts, colors, and spaces should work harmoniously. I also appreciate
           the technical aspects of design, bringing ideas to life through code.
         </p>
+
         <p>
-          In my spare time, you can find me working on handmade craft patterns I
-          sell in my
+          I'm passionate about exploring a wide range of interests, including
+          SEO, video editing, photography, OBS Studio, and YouTube.
+        </p>
+        <p>
+          In the past I developed a love for creating handmade craft patterns,
+          and today I still sell them through my
           <a
             href="https://www.etsy.com/it/shop/FernandasCraftRoom"
             target="_blank"
@@ -37,7 +42,7 @@ function AboutAndSkillsCard() {
         <Skills />
       </div>
     </div>
-  )
+  );
 }
 
-export default AboutAndSkillsCard
+export default AboutAndSkillsCard;

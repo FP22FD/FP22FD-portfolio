@@ -1,29 +1,30 @@
-import react from '/src/assets/icons/react.svg'
-import javascript from '/src/assets/icons/javascript.svg'
-import typescript from '/src/assets/icons/typescript.svg'
-import tailwind from '/src/assets/icons/tailwind.svg'
-import bootstrap from '/src/assets/icons/bootstrap.svg'
-import sass from '/src/assets/icons/sass.svg'
-import figma from '/src/assets/icons/figma.svg'
-import html from '/src/assets/icons/html.svg'
-import css from '/src/assets/icons/css.svg'
-import cypress from '/src/assets/icons/cypress.svg'
-import jest from '/src/assets/icons/jest.svg'
-import vscode from '/src/assets/icons/vscode.svg'
-import github from '/src/assets/icons/github.svg'
-import git from '/src/assets/icons/git.svg'
-import postman from '/src/assets/icons/postman.svg'
-import wordpress from '/src/assets/icons/wordpress.svg'
-import database from '/src/assets/icons/database.svg'
-import netlify from '/src/assets/icons/netlify.svg'
-import vite from '/src/assets/icons/vite.svg'
-import vitest from '/src/assets/icons/vitest.svg'
-import ux from '/src/assets/icons/ux.png'
-import flywheel from '/src/assets/icons/flywheel.png'
+import react from '/src/assets/icons/react.svg';
+import javascript from '/src/assets/icons/javascript.svg';
+import typescript from '/src/assets/icons/typescript.svg';
+import tailwind from '/src/assets/icons/tailwind.svg';
+import bootstrap from '/src/assets/icons/bootstrap.svg';
+import sass from '/src/assets/icons/sass.svg';
+import hotjar from '/src/assets/icons/hotjar.svg';
+import figma from '/src/assets/icons/figma.svg';
+import html from '/src/assets/icons/html.svg';
+import css from '/src/assets/icons/css.svg';
+import cypress from '/src/assets/icons/cypress.svg';
+import jest from '/src/assets/icons/jest.svg';
+import vscode from '/src/assets/icons/vscode.svg';
+import github from '/src/assets/icons/github.svg';
+import git from '/src/assets/icons/git.svg';
+import postman from '/src/assets/icons/postman.svg';
+import wordpress from '/src/assets/icons/wordpress.svg';
+import database from '/src/assets/icons/database.svg';
+import netlify from '/src/assets/icons/netlify.svg';
+import vite from '/src/assets/icons/vite.svg';
+import vitest from '/src/assets/icons/vitest.svg';
+import ux from '/src/assets/icons/ux.png';
+import flywheel from '/src/assets/icons/flywheel.png';
 
 function Skills() {
   return (
-    <section className="text-primary-darkBlue rounded bg-neutral-ofWhite p-4">
+    <section className="rounded bg-neutral-ofWhite p-4 text-primary-darkBlue">
       <h3 className="mb-4 text-left text-lg font-bold">SKILLS</h3>
       <div className="grid grid-cols-3 gap-2 text-nowrap sm:grid-cols-4 md:grid-cols-8 xl:grid-cols-10">
         {[
@@ -37,6 +38,7 @@ function Skills() {
           { src: jest, alt: 'Jest', label: 'Jest' },
           { src: vitest, alt: 'Vitest', label: 'Vitest' },
           { src: vite, alt: 'Vite', label: 'Vite' },
+          { src: hotjar, alt: 'Hotjar', label: 'Hotjar' },
           { src: figma, alt: 'Figma', label: 'Figma' },
           { src: vscode, alt: 'VS code', label: 'VS code' },
           { src: html, alt: 'HTML', label: 'HTML' },
@@ -64,7 +66,7 @@ function Skills() {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;
