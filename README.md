@@ -74,6 +74,7 @@ Ensure the following tools are installed on your system:
    ```
 
 4. Generate a production-ready build
+
    ```bash
    npm run build
    ```
@@ -107,7 +108,32 @@ Ensure the following tools are installed on your system:
    ```
 
 3. Deploy using:
+
    ```bash
    npm run predeploy
    npn run deploy
    ```
+
+## New Feature: Hotjar Integration
+
+This portfolio website includes [Hotjar](https://www.hotjar.com/) integration to enhance user experience tracking and analysis.  
+Hotjar allows us to:
+
+- Analyze User Behavior: Understand how users interact with the portfolio.
+- Collect Feedback: Identify usability issues and improve the design iteratively.
+- Heatmaps and Session Recordings: Gain insights into user navigation patterns.
+
+### How It Works
+
+- The Hotjar script is implemented globally in the project via a `Hotjar` React component.
+- This component initializes Hotjar with a unique `hjid` (Hotjar ID) to connect it to the account.
+- It is included at the root of the application, ensuring it tracks user activity on all pages.
+
+### How to Replace the Hotjar ID
+
+1. Open the `Hotjar.tsx` file in `src/components`.
+2. Replace `5259025` with the unique ID provided by your Hotjar account.
+
+```tsx
+h._hjSettings = { hjid: YOUR_HOTJAR_ID, hjsv: 6 };
+```
