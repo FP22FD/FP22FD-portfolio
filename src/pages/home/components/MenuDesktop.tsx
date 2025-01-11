@@ -1,17 +1,18 @@
-import { Link, NavLink } from 'react-router-dom'
-import Button from './Button'
-import logo from '../../../assets/images/logo.svg'
-import { handleContactClick, handleScroll } from '../utils/scrollUtils'
+import { Link, NavLink } from 'react-router-dom';
+import Button from './Button';
+import logo from '../../../assets/images/logo.svg';
+import { handleContactClick, handleScroll } from '../utils/scrollUtils';
 
 export function MenuDesktop() {
   const pageLinks = [
     { label: 'Home', to: '#home' },
     { label: 'Projects', to: '#projects' },
-  ]
+    { label: 'CV', href: '/FP22FD-portfolio/cv-en.docx' },
+  ];
 
   return (
     <div className="justify-betwenn hidden items-center justify-between md:flex">
-      <div className="text-primary-darkBlue flex">
+      <div className="flex text-primary-darkBlue">
         <Link to="#home" aria-label="Go to homepage">
           <img
             src={logo}
@@ -23,17 +24,30 @@ export function MenuDesktop() {
       </div>
 
       <div className="hidden items-center space-x-4 md:flex">
-        {pageLinks.map(({ label, to }) => (
-          <NavLink
-            key={label}
-            to={to}
-            className="text-primary-darkBlue uppercase hover-underline"
-            aria-label={`Go to ${label}`}
-            onClick={(e) => handleScroll(e, to.slice(1))}
-          >
-            {label}
-          </NavLink>
-        ))}
+        {pageLinks.map(({ label, to, href }) =>
+          href ? (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener  noreferrer" // Security best practice for external links
+              className="uppercase text-primary-darkBlue hover-underline"
+              aria-label={`Open ${label}`}
+            >
+              {label}
+            </a>
+          ) : (
+            <NavLink
+              key={label}
+              to={to || ''}
+              className="uppercase text-primary-darkBlue hover-underline"
+              aria-label={`Go to ${label}`}
+              onClick={(e) => to && handleScroll(e, to.slice(1))}
+            >
+              {label}
+            </NavLink>
+          ),
+        )}
         <Button
           type="button"
           label="CONTACT"
@@ -44,5 +58,5 @@ export function MenuDesktop() {
         />
       </div>
     </div>
-  )
+  );
 }

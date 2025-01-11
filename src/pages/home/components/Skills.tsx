@@ -5,6 +5,7 @@ import tailwind from '/src/assets/icons/tailwind.svg';
 import bootstrap from '/src/assets/icons/bootstrap.svg';
 import sass from '/src/assets/icons/sass.svg';
 import hotjar from '/src/assets/icons/hotjar.svg';
+import storybook from '/src/assets/icons/storybook.svg';
 import figma from '/src/assets/icons/figma.svg';
 import html from '/src/assets/icons/html.svg';
 import css from '/src/assets/icons/css.svg';
@@ -13,9 +14,11 @@ import jest from '/src/assets/icons/jest.svg';
 import vscode from '/src/assets/icons/vscode.svg';
 import github from '/src/assets/icons/github.svg';
 import git from '/src/assets/icons/git.svg';
+import npm from '/src/assets/icons/npm.svg';
 import postman from '/src/assets/icons/postman.svg';
 import wordpress from '/src/assets/icons/wordpress.svg';
 import database from '/src/assets/icons/database.svg';
+import sql from '/src/assets/icons/sql.svg';
 import netlify from '/src/assets/icons/netlify.svg';
 import vite from '/src/assets/icons/vite.svg';
 import vitest from '/src/assets/icons/vitest.svg';
@@ -39,17 +42,20 @@ function Skills() {
           { src: vitest, alt: 'Vitest', label: 'Vitest' },
           { src: vite, alt: 'Vite', label: 'Vite' },
           { src: hotjar, alt: 'Hotjar', label: 'Hotjar' },
+          { src: storybook, alt: 'Storybook', label: 'Storybook' },
           { src: figma, alt: 'Figma', label: 'Figma' },
           { src: vscode, alt: 'VS code', label: 'VS code' },
           { src: html, alt: 'HTML', label: 'HTML' },
           { src: css, alt: 'CSS', label: 'CSS' },
           { src: git, alt: 'Git', label: 'Git' },
           { src: github, alt: 'GitHub', label: 'GitHub' },
+          { src: npm, alt: 'NPM', label: 'NPM' },
           { src: postman, alt: 'Postman', label: 'Postman' },
           { src: wordpress, alt: 'WordPress', label: 'WordPress' },
           { src: flywheel, alt: 'Flywheel', label: 'Local' },
           { src: ux, alt: 'UX-UI', label: 'UX - UI' },
           { src: database, alt: 'API', label: 'API' },
+          { src: sql, alt: 'SQL', label: 'SQL' },
           { src: netlify, alt: 'Netlify', label: 'Netlify' },
         ].map((skill, index) => (
           <div
