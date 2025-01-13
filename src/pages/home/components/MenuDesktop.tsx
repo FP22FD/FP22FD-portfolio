@@ -2,17 +2,19 @@ import { Link, NavLink } from 'react-router-dom';
 import Button from './Button';
 import logo from '../../../assets/images/logo.svg';
 import { handleContactClick, handleScroll } from '../utils/scrollUtils';
+import Flag from 'react-world-flags';
 
 export function MenuDesktop() {
   const pageLinks = [
     { label: 'Home', to: '#home' },
     { label: 'Projects', to: '#projects' },
-    { label: 'CV', href: '/FP22FD-portfolio/cv-en.docx' },
+    { label: 'CV-en', href: '/FP22FD-portfolio/cv-en.pdf', flag: 'GB' },
+    { label: 'CV-no', href: '/FP22FD-portfolio/cv-no.pdf', flag: 'NO' },
   ];
 
   return (
-    <div className="justify-betwenn hidden items-center justify-between md:flex">
-      <div className="flex text-primary-darkBlue">
+    <div className="hidden items-center justify-between md:flex">
+      <div className="flex items-center text-primary-darkBlue">
         <Link to="#home" aria-label="Go to homepage">
           <img
             src={logo}
@@ -23,18 +25,25 @@ export function MenuDesktop() {
         <h1 className="ml-4 text-xl font-bold 2xl:text-2xl">Fernanda Gomes</h1>
       </div>
 
-      <div className="hidden items-center space-x-4 md:flex">
-        {pageLinks.map(({ label, to, href }) =>
+      <div className="hidden items-center space-x-6 md:flex">
+        {pageLinks.map(({ label, to, href, flag }) =>
           href ? (
             <a
               key={label}
               href={href}
               target="_blank"
-              rel="noopener  noreferrer" // Security best practice for external links
-              className="uppercase text-primary-darkBlue hover-underline"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 uppercase text-primary-darkBlue"
               aria-label={`Open ${label}`}
             >
-              {label}
+              <Flag
+                code={flag}
+                className="h-4 w-6 object-cover"
+                aria-hidden="true"
+              />
+              <span className="text-sm font-medium hover-underline">
+                {label}
+              </span>
             </a>
           ) : (
             <NavLink
