@@ -24,6 +24,7 @@ import vite from '/src/assets/icons/vite.svg';
 import vitest from '/src/assets/icons/vitest.svg';
 import ux from '/src/assets/icons/ux.png';
 import flywheel from '/src/assets/icons/flywheel.png';
+import i18n from '/src/assets/icons/i18next-icon.svg';
 
 function Skills() {
   return (
@@ -42,7 +43,6 @@ function Skills() {
           { src: vitest, alt: 'Vitest', label: 'Vitest' },
           { src: vite, alt: 'Vite', label: 'Vite' },
           { src: hotjar, alt: 'Hotjar', label: 'Hotjar' },
-          { src: storybook, alt: 'Storybook', label: 'Storybook' },
           { src: figma, alt: 'Figma', label: 'Figma' },
           { src: vscode, alt: 'VS code', label: 'VS code' },
           { src: html, alt: 'HTML', label: 'HTML' },
@@ -55,8 +55,10 @@ function Skills() {
           { src: flywheel, alt: 'Flywheel', label: 'Local' },
           { src: ux, alt: 'UX-UI', label: 'UX - UI' },
           { src: database, alt: 'API', label: 'API' },
-          { src: sql, alt: 'SQL', label: 'SQL' },
           { src: netlify, alt: 'Netlify', label: 'Netlify' },
+          { src: sql, alt: 'SQL', label: 'SQL' },
+          { src: storybook, alt: 'Storybook', label: 'Storybook' },
+          { src: i18n, alt: 'i18next', label: 'i18next' },
         ].map((skill, index) => (
           <div
             key={index}
