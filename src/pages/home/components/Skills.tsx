@@ -24,8 +24,9 @@ import vite from '/src/assets/icons/vite.svg';
 import vitest from '/src/assets/icons/vitest.svg';
 import ux from '/src/assets/icons/ux.png';
 import flywheel from '/src/assets/icons/flywheel.png';
-import i18n from '/src/assets/icons/i18next.svg';
+import i18Next from '/src/assets/icons/i18next.svg';
 import vue3 from '/src/assets/icons/vue.svg';
+import i18n from '/src/assets/icons/i18n.svg';
 
 function Skills() {
   return (
@@ -57,10 +58,11 @@ function Skills() {
           { src: ux, alt: 'UX-UI', label: 'UX - UI' },
           { src: database, alt: 'API', label: 'API' },
           { src: netlify, alt: 'Netlify', label: 'Netlify' },
+          { src: i18n, alt: 'i18n', label: 'i18n' },
+          { src: i18Next, alt: 'i18Next', label: 'i18Next' },
+          { src: vue3, alt: 'Vue 3', label: 'Vue 3' },
           { src: sql, alt: 'SQL', label: 'SQL' },
           { src: storybook, alt: 'Storybook', label: 'Storybook' },
-          { src: i18n, alt: 'i18next', label: 'i18next' },
-          { src: vue3, alt: 'Vue 3', label: 'Vue 3' },
         ].map((skill, index) => (
           <div
             key={index}

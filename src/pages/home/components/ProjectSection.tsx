@@ -9,6 +9,9 @@ import tailwindIcon from '/src/assets/icons/tailwindgreen.svg';
 import cypressIcon from '/src/assets/icons/cypressgreen.svg';
 import testunitIcon from '/src/assets/icons/e2e.svg';
 import typescriptIcon from '/src/assets/icons/typescriptgreen.svg';
+import i18NextIcon from '/src/assets/icons/i18nextgreen.svg';
+import i18nIcon from '/src/assets/icons/i18ngreen.svg';
+import figmaIcon from '/src/assets/icons/figmagreen.svg';
 import holidaze from '/src/assets/images/process/holidazebooking.png';
 import holidazeDesign from '/src/assets/images/process/holidazeFigmaDS.png';
 import holidazePrototype from '/src/assets/images/process/holidazeFigmaPRO.png';
@@ -20,6 +23,10 @@ import onlinetest from '/src/assets/images/process/onlineTest.png';
 import auction from '/src/assets/images/process/auctionhouse.png';
 import auctionDesign from '/src/assets/images/process/auctionFigmaDS.png';
 import auctionPrototype from '/src/assets/images/process/auctionFigmaPRO.png';
+import publicSpace from '/src/assets/images/process/publicSpace.png';
+import publicSpacePrototype from '/src/assets/images/process/publicSpaceFigmaPRO.png';
+import publicSpaceDesign from '/src/assets/images/process/publicSpaceFigmaDS.png';
+import publicSpaceComponent from '/src/assets/images/process/publicSpaceFigmaCOMP.png';
 
 export const projects = [
   {
@@ -28,10 +35,11 @@ export const projects = [
       'This is Project Exam 2 assignment. Holidaze Booking is a booking site for hotels, cabins, etc., where registered users can book accommodations and manage their bookings, while admins can manage accommodations and bookings.',
     tags: ['react', 'typescript', 'tailwind', 'unit test', 'html', 'css'],
     icons: [
+      { src: figmaIcon, description: 'Figma' },
       { src: reactIcon, description: 'React Framework' },
       { src: tailwindIcon, description: 'Tailwind CSS' },
-      { src: typescriptIcon, description: 'Typescript' },
       { src: testunitIcon, description: 'Unit Test' },
+      { src: typescriptIcon, description: 'Typescript' },
       { src: htmlIcon, description: 'HTML' },
       { src: cssIcon, description: 'CSS' },
     ],
@@ -52,10 +60,11 @@ export const projects = [
       'This is JavaScript Frameworks assignment. Online Shop is a React-based shopping cart application that allows users to add and remove items from their cart.',
     tags: ['react', 'typescript', 'tailwind', 'unit test', 'html', 'css'],
     icons: [
+      { src: figmaIcon, description: 'Figma' },
       { src: reactIcon, description: 'React Framework' },
       { src: tailwindIcon, description: 'Tailwind CSS' },
-      { src: typescriptIcon, description: 'Typescript' },
       { src: testunitIcon, description: 'Unit Test' },
+      { src: typescriptIcon, description: 'Typescript' },
       { src: htmlIcon, description: 'HTML' },
       { src: cssIcon, description: 'CSS' },
     ],
@@ -73,9 +82,10 @@ export const projects = [
       'This is Semester Project 2 assignment. Auction House is an online auction platform where users can list items for auction, place bids, and manage their profiles.',
     tags: ['javascript', 'bootstrap', 'cypress', 'html', 'css'],
     icons: [
+      { src: figmaIcon, description: 'Figma' },
+      { src: cypressIcon, description: 'Cypress Testing' },
       { src: javascriptIcon, description: 'Javascript' },
       { src: bootstrapIcon, description: 'Bootstrap' },
-      { src: cypressIcon, description: 'Cypress Testing' },
       { src: htmlIcon, description: 'HTML' },
       { src: cssIcon, description: 'CSS' },
     ],
@@ -86,6 +96,30 @@ export const projects = [
       { src: auction, description: 'Project Implemented | Live Demo' },
       { src: auctionDesign, description: 'Design System | Figma' },
       { src: auctionPrototype, description: 'Prototype | Figma' },
+    ],
+  },
+  {
+    title: 'PUBLIC SPACE',
+    description:
+      'This Figma prototype and the React app of a dashboard built within the available 3 days. It includes a basic i18n setup on the Overview page to showcase multilingual support.',
+    tags: ['typescript', 'tailwind', 'html', 'css', 'i18n'],
+    icons: [
+      { src: figmaIcon, description: 'Figma' },
+      { src: reactIcon, description: 'React Framework' },
+      { src: i18NextIcon, description: 'i18Next Library' },
+      { src: i18nIcon, description: 'i18n Language Support' },
+      { src: tailwindIcon, description: 'Tailwind CSS' },
+      { src: typescriptIcon, description: 'Typecript' },
+      { src: htmlIcon, description: 'HTML' },
+      { src: cssIcon, description: 'CSS' },
+    ],
+    githubLink: 'https://github.com/FP22FD/dashboard-public-space',
+    websiteLink: 'https://dashboard-public-space.netlify.app/',
+    imageSrc: [
+      { src: publicSpace, description: 'Project Implemented | Live Demo' },
+      { src: publicSpaceDesign, description: 'Design System | Figma' },
+      { src: publicSpacePrototype, description: 'Prototype | Figma' },
+      { src: publicSpaceComponent, description: 'Reusable Components | Figma' },
     ],
   },
 ];
@@ -110,6 +144,7 @@ function ProjectsSection() {
           'bootstrap',
           'unit test',
           'cypress',
+          'i18n',
         ].map((tag) => (
           <button
             key={tag}
@@ -120,7 +155,7 @@ function ProjectsSection() {
             } ml-2 text-nowrap rounded p-2 md:px-2 md:py-2`}
             onClick={() => setFilter(tag)}
           >
-            {tag.toUpperCase()}
+            {tag === 'i18n' ? tag : tag.toUpperCase()}
           </button>
         ))}
       </div>
