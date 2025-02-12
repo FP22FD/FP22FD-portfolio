@@ -43,8 +43,7 @@ export const projects = [
       { src: htmlIcon, description: 'HTML' },
       { src: cssIcon, description: 'CSS' },
     ],
-    githubLink:
-      'https://github.com/FP22FD/holidaze-booking/blob/main/README.md',
+    githubLink: 'https://github.com/FP22FD/holidaze-booking/blob/main/README.md',
     websiteLink: 'https://holidaze-booking-ca.netlify.app/',
     imageSrc: [
       { src: holidaze, description: 'Project Implemented | Live Demo' },
@@ -89,8 +88,7 @@ export const projects = [
       { src: htmlIcon, description: 'HTML' },
       { src: cssIcon, description: 'CSS' },
     ],
-    githubLink:
-      'https://github.com/FP22FD/Auction-House-SP2-CA/blob/main/README.md',
+    githubLink: 'https://github.com/FP22FD/Auction-House-SP2-CA/blob/main/README.md',
     websiteLink: 'https://fp22fd.github.io/Auction-House-SP2-CA/',
     imageSrc: [
       { src: auction, description: 'Project Implemented | Live Demo' },
@@ -102,7 +100,7 @@ export const projects = [
     title: 'PUBLIC SPACE',
     description:
       'This Figma prototype and the React app of a dashboard built within the available 3 days. It includes a basic i18n setup on the Overview page to showcase multilingual support.',
-    tags: ['typescript', 'tailwind', 'html', 'css', 'i18n'],
+    tags: ['typescript', 'tailwind', 'html', 'css', 'language support'],
     icons: [
       { src: figmaIcon, description: 'Figma' },
       { src: reactIcon, description: 'React Framework' },
@@ -127,10 +125,7 @@ export const projects = [
 function ProjectsSection() {
   const [filter, setFilter] = useState('all');
 
-  const filteredProjects =
-    filter === 'all'
-      ? projects
-      : projects.filter((project) => project.tags.includes(filter));
+  const filteredProjects = filter === 'all' ? projects : projects.filter((project) => project.tags.includes(filter));
 
   return (
     <section className="mt-16 w-full gap-2 text-right text-xs lg:text-sm">
@@ -144,7 +139,7 @@ function ProjectsSection() {
           'bootstrap',
           'unit test',
           'cypress',
-          'i18n',
+          'language support',
         ].map((tag) => (
           <button
             key={tag}
@@ -155,7 +150,8 @@ function ProjectsSection() {
             } ml-2 text-nowrap rounded p-2 md:px-2 md:py-2`}
             onClick={() => setFilter(tag)}
           >
-            {tag === 'i18n' ? tag : tag.toUpperCase()}
+            {/* {tag === 'language support' ? tag : tag.toUpperCase()} */}
+            {tag.toUpperCase()}
           </button>
         ))}
       </div>
@@ -167,8 +163,7 @@ function ProjectsSection() {
             title={project.title}
             description={project.description}
             icons={(project.icons ?? []).filter(
-              (icon): icon is { src: string; description: string } =>
-                icon !== undefined,
+              (icon): icon is { src: string; description: string } => icon !== undefined,
             )}
             githubLink={project.githubLink}
             websiteLink={project.websiteLink}
