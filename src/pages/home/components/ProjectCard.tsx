@@ -56,6 +56,7 @@ function ProjectCard({
         <a onClick={() => handleImageClick(image.src)}>
           <img
             src={image.src}
+            loading="lazy"
             alt={`Thumbnail ${i + 1}`}
             className="mt-2 h-16 object-cover"
           />
@@ -97,7 +98,12 @@ function ProjectCard({
           <div className="mb-4 flex gap-4">
             {icons.map((icon, index) => (
               <div key={index} className="group relative">
-                <img src={icon.src} alt="Icon" className="h-6 w-6" />
+                <img
+                  src={icon.src}
+                  loading="lazy"
+                  alt="Icon"
+                  className="h-6 w-6"
+                />
                 <div className="absolute left-1/2 top-full z-10 hidden w-max -translate-x-1/2 rounded bg-neutral-default px-2 py-1 text-typography-grey opacity-0 transition-opacity duration-200 group-hover:block group-hover:opacity-100">
                   {icon.description}
                 </div>
@@ -110,7 +116,12 @@ function ProjectCard({
               target="_blank"
               className="flex items-center rounded border p-2 text-typography-grey hover:scale-105 hover:text-typography-default"
             >
-              <img src={githubIcon} alt="GitHub" className="mr-2 h-6 w-6" />
+              <img
+                src={githubIcon}
+                loading="lazy"
+                alt="GitHub"
+                className="mr-2 h-6 w-6"
+              />
               <span>View More</span>
             </a>
             <a
@@ -118,7 +129,12 @@ function ProjectCard({
               target="_blank"
               className="flex items-center rounded border p-2 text-typography-grey hover:scale-105 hover:text-typography-default"
             >
-              <img src={webIcon} alt="Website" className="mr-2 h-6 w-6" />
+              <img
+                src={webIcon}
+                loading="lazy"
+                alt="Website"
+                className="mr-2 h-6 w-6"
+              />
               <span>Live Demo</span>
             </a>
           </div>
@@ -134,6 +150,7 @@ function ProjectCard({
               )}
               <img
                 src={image.src}
+                loading="lazy"
                 alt={`Project Thumbnail ${title}`}
                 className="h-72 w-full cursor-pointer rounded object-cover"
                 onClick={() => handleImageClick(image.src)}
@@ -167,7 +184,12 @@ const Modal = ({ imageSrc, closeModal }: ModalProps) => {
         >
           ✕
         </button>
-        <img src={imageSrc} alt="Enlarged project" className="object-contain" />
+        <img
+          src={imageSrc}
+          loading="lazy"
+          alt="Enlarged project"
+          className="object-contain"
+        />
       </div>
     </div>
   );

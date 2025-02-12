@@ -1,15 +1,16 @@
-import profile from '/src/assets/images/profile.png'
-import linkedin from '/src/assets/icons/linkedin.svg'
-import github from '/src/assets/icons/github.svg'
+import profile from '/src/assets/images/profile.png';
+import linkedin from '/src/assets/icons/linkedin.svg';
+import github from '/src/assets/icons/github.svg';
 
 function FeaturedCard() {
   return (
-    <div className="text-primary-darkBlue h-full w-full rounded lg:flex lg:flex-col xl:flex-row">
+    <div className="h-full w-full rounded text-primary-darkBlue lg:flex lg:flex-col xl:flex-row">
       <div className="relative flex h-full w-full gap-2 rounded bg-neutral-ofWhite lg:flex-col">
         <div className="relative h-full w-[60%] lg:w-[88%]">
-          <div className="bg-primary-darkBlue absolute -left-0 top-0 h-[80%] w-[90%] object-contain"></div>
+          <div className="absolute -left-0 top-0 h-[80%] w-[90%] bg-primary-darkBlue object-contain"></div>
           <img
             src={profile}
+            loading="lazy"
             alt="Fernanda's profile image"
             className="relative z-10 m-4 w-full object-cover grayscale transition-all duration-300 hover:grayscale-0 hover:filter"
           />
@@ -53,7 +54,7 @@ function FeaturedCard() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default FeaturedCard
+export default FeaturedCard;
