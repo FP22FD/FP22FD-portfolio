@@ -1,1 +1,0 @@
-import{j as e,L as t}from"./index-BkRJuN0z.js";function s(){return e.jsxs("div",{className:"mt-28 flex h-screen w-full flex-col items-center",children:[e.jsx("h1",{className:"mb-8 text-nowrap text-center text-2xl text-typography-default",children:"Oops! You seem to be lost"}),e.jsx(t,{className:"hover:text-typography-grey",to:"/",children:"Go to home"})]})}export{s as default};
