@@ -8,8 +8,16 @@ export function MenuDesktop() {
   const pageLinks = [
     { label: 'Home', to: '#home' },
     { label: 'Projects', to: '#projects' },
-    { label: 'CV-en', href: '/FP22FD-portfolio/cv-en.pdf', flag: 'GB' },
-    { label: 'CV-no', href: '/FP22FD-portfolio/cv-no.pdf', flag: 'NO' },
+    {
+      label: 'CV-en',
+      href: '/FP22FD-portfolio/fernanda-cv-en.pdf',
+      flag: 'GB',
+    },
+    {
+      label: 'CV-no',
+      href: '/FP22FD-portfolio/fernanda-cv-no.pdf',
+      flag: 'NO',
+    },
   ];
 
   return (
