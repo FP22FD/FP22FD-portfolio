@@ -137,3 +137,8 @@ Hotjar allows us to:
 ```tsx
 h._hjSettings = { hjid: YOUR_HOTJAR_ID, hjsv: 6 };
 ```
+
+## Resource
+
+Icons: [React Icons](https://react-icons.github.io/react-icons/icons/pi/)
+Icons: [Image size optimization](https://tinypng.com/)
