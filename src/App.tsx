@@ -1,24 +1,28 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './pages/home/components/Layout';
-import { ErrorPage } from './pages/errorPage/ErrorPage';
-import HomePage from './pages/home/HomePage';
-import PageNotFound from './pages/notFound/NotFound';
-import Hotjar from './pages/home/components/Hotjar';
+import { Suspense, lazy } from 'react';
+
+const Layout = lazy(() => import('./pages/home/components/Layout'));
+const HomePage = lazy(() => import('./pages/home/HomePage'));
+const ErrorPage = lazy(() => import('./pages/errorPage/ErrorPage'));
+const PageNotFound = lazy(() => import('./pages/notFound/NotFound'));
+const Hotjar = lazy(() => import('./pages/home/components/Hotjar'));
 
 function App() {
   return (
     <>
-      <Hotjar />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Hotjar />
 
-      <Router>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<HomePage />} />
-          </Route>
-          <Route path="*" element={<PageNotFound />} />
-          <Route path="error" element={<ErrorPage />} />
-        </Routes>
-      </Router>
+        <Router>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<HomePage />} />
+            </Route>
+            <Route path="*" element={<PageNotFound />} />
+            <Route path="error" element={<ErrorPage />} />
+          </Routes>
+        </Router>
+      </Suspense>
     </>
   );
 }
