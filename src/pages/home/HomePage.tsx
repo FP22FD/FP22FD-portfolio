@@ -1,7 +1,7 @@
-import AboutAndSkillsCard from './components/AboutAndSkillsCard'
-import ContactSection from './components/Contact'
-import FeaturedCard from './components/FeaturedCard'
-import ProjectsSection from './components/ProjectSection'
+import AboutAndSkillsCard from './components/AboutAndSkillsCard';
+import ContactSection from './components/Contact';
+import FeaturedCard from './components/FeaturedCard';
+import ProjectsSection from './components/ProjectSection';
 
 function HomePage() {
   return (
@@ -22,7 +22,7 @@ function HomePage() {
         <ContactSection />
       </div>
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

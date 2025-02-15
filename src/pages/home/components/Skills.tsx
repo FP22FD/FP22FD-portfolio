@@ -1,32 +1,32 @@
-import react from '/src/assets/icons/react.svg';
-import javascript from '/src/assets/icons/javascript.svg';
-import typescript from '/src/assets/icons/typescript.svg';
-import tailwind from '/src/assets/icons/tailwind.svg';
-import bootstrap from '/src/assets/icons/bootstrap.svg';
-import sass from '/src/assets/icons/sass.svg';
-import hotjar from '/src/assets/icons/hotjar.svg';
-import storybook from '/src/assets/icons/storybook.svg';
-import figma from '/src/assets/icons/figma.svg';
-import html from '/src/assets/icons/html.svg';
-import css from '/src/assets/icons/css.svg';
-import cypress from '/src/assets/icons/cypress.svg';
-import jest from '/src/assets/icons/jest.svg';
-import vscode from '/src/assets/icons/vscode.svg';
-import github from '/src/assets/icons/github.svg';
-import git from '/src/assets/icons/git.svg';
-import npm from '/src/assets/icons/npm.svg';
-import postman from '/src/assets/icons/postman.svg';
-import wordpress from '/src/assets/icons/wordpress.svg';
-import database from '/src/assets/icons/database.svg';
-import sql from '/src/assets/icons/sql.svg';
-import netlify from '/src/assets/icons/netlify.svg';
-import vite from '/src/assets/icons/vite.svg';
-import vitest from '/src/assets/icons/vitest.svg';
-import ux from '/src/assets/icons/ux.png';
-import flywheel from '/src/assets/icons/flywheel.png';
-import i18Next from '/src/assets/icons/i18next.svg';
-import vue3 from '/src/assets/icons/vue.svg';
-import i18n from '/src/assets/icons/i18n.svg';
+import react from '/assets/icons/react.svg';
+import javascript from '/assets/icons/javascript.svg';
+import typescript from '/assets/icons/typescript.svg';
+import tailwind from '/assets/icons/tailwind.svg';
+import bootstrap from '/assets/icons/bootstrap.svg';
+import sass from '/assets/icons/sass.svg';
+import hotjar from '/assets/icons/hotjar.svg';
+import storybook from '/assets/icons/storybook.svg';
+import figma from '/assets/icons/figma.svg';
+import html from '/assets/icons/html.svg';
+import css from '/assets/icons/css.svg';
+import cypress from '/assets/icons/cypress.svg';
+import jest from '/assets/icons/jest.svg';
+import vscode from '/assets/icons/vscode.svg';
+import github from '/assets/icons/github.svg';
+import git from '/assets/icons/git.svg';
+import npm from '/assets/icons/npm.svg';
+import postman from '/assets/icons/postman.svg';
+import wordpress from '/assets/icons/wordpress.svg';
+import database from '/assets/icons/database.svg';
+import sql from '/assets/icons/sql.svg';
+import netlify from '/assets/icons/netlify.svg';
+import vite from '/assets/icons/vite.svg';
+import vitest from '/assets/icons/vitest.svg';
+import ux from '/assets/icons/ux.png';
+import flywheel from '/assets/icons/flywheel.png';
+import i18Next from '/assets/icons/i18next.svg';
+import vue3 from '/assets/icons/vue.svg';
+import i18n from '/assets/icons/i18n.svg';
 
 function Skills() {
   return (
@@ -64,15 +64,8 @@ function Skills() {
           { src: sql, alt: 'SQL', label: 'SQL' },
           { src: storybook, alt: 'Storybook', label: 'Storybook' },
         ].map((skill, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center rounded border p-2 text-center"
-          >
-            <img
-              src={skill.src}
-              alt={`icon ${skill.alt}`}
-              className="mb-0 h-6 w-6 sm:h-8 sm:w-8 lg:mb-1"
-            />
+          <div key={index} className="flex flex-col items-center rounded border p-2 text-center">
+            <img src={skill.src} alt={`icon ${skill.alt}`} className="mb-0 h-6 w-6 sm:h-8 sm:w-8 lg:mb-1" />
             <span className="text-xs">{skill.label}</span>
           </div>
         ))}

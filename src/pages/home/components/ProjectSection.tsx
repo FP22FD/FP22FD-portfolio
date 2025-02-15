@@ -1,32 +1,32 @@
 import { useState } from 'react';
 import ProjectCard from './ProjectCard';
-import htmlIcon from '/src/assets/icons/htmlgreen.svg';
-import cssIcon from '/src/assets/icons/cssgreen.svg';
-import reactIcon from '/src/assets/icons/reactgreen.svg';
-import javascriptIcon from '/src/assets/icons/javascriptgreen.svg';
-import bootstrapIcon from '/src/assets/icons/bootstrapgreen.svg';
-import tailwindIcon from '/src/assets/icons/tailwindgreen.svg';
-import cypressIcon from '/src/assets/icons/cypressgreen.svg';
-import testunitIcon from '/src/assets/icons/e2e.svg';
-import typescriptIcon from '/src/assets/icons/typescriptgreen.svg';
-import i18NextIcon from '/src/assets/icons/i18nextgreen.svg';
-import i18nIcon from '/src/assets/icons/i18ngreen.svg';
-import figmaIcon from '/src/assets/icons/figmagreen.svg';
-import holidaze from '/src/assets/images/process/holidazebooking.png';
-import holidazeDesign from '/src/assets/images/process/holidazeFigmaDS.png';
-import holidazePrototype from '/src/assets/images/process/holidazeFigmaPRO.png';
-import holidazePostman from '/src/assets/images/process/holidazePostman.png';
-import holidazetest from '/src/assets/images/process/holidazeTest.png';
-import online from '/src/assets/images/process/onlineshop.png';
-import postmanOnline from '/src/assets/images/process/onlinePostman.png';
-import onlinetest from '/src/assets/images/process/onlineTest.png';
-import auction from '/src/assets/images/process/auctionhouse.png';
-import auctionDesign from '/src/assets/images/process/auctionFigmaDS.png';
-import auctionPrototype from '/src/assets/images/process/auctionFigmaPRO.png';
-import publicSpace from '/src/assets/images/process/publicSpace.png';
-import publicSpacePrototype from '/src/assets/images/process/publicSpaceFigmaPRO.png';
-import publicSpaceDesign from '/src/assets/images/process/publicSpaceFigmaDS.png';
-import publicSpaceComponent from '/src/assets/images/process/publicSpaceFigmaCOMP.png';
+import htmlIcon from '/assets/icons/htmlgreen.svg';
+import cssIcon from '/assets/icons/cssgreen.svg';
+import reactIcon from '/assets/icons/reactgreen.svg';
+import javascriptIcon from '/assets/icons/javascriptgreen.svg';
+import bootstrapIcon from '/assets/icons/bootstrapgreen.svg';
+import tailwindIcon from '/assets/icons/tailwindgreen.svg';
+import cypressIcon from '/assets/icons/cypressgreen.svg';
+import testunitIcon from '/assets/icons/e2e.svg';
+import typescriptIcon from '/assets/icons/typescriptgreen.svg';
+import i18NextIcon from '/assets/icons/i18nextgreen.svg';
+import i18nIcon from '/assets/icons/i18ngreen.svg';
+import figmaIcon from '/assets/icons/figmagreen.svg';
+import holidaze from '/assets/images/process/holidazebooking.png';
+import holidazeDesign from '/assets/images/process/holidazeFigmaDS.png';
+import holidazePrototype from '/assets/images/process/holidazeFigmaPRO.png';
+import holidazePostman from '/assets/images/process/holidazePostman.png';
+import holidazetest from '/assets/images/process/holidazeTest.png';
+import online from '/assets/images/process/onlineshop.png';
+import postmanOnline from '/assets/images/process/onlinePostman.png';
+import onlinetest from '/assets/images/process/onlineTest.png';
+import auction from '/assets/images/process/auctionhouse.png';
+import auctionDesign from '/assets/images/process/auctionFigmaDS.png';
+import auctionPrototype from '/assets/images/process/auctionFigmaPRO.png';
+import publicSpace from '/assets/images/process/publicSpace.png';
+import publicSpacePrototype from '/assets/images/process/publicSpaceFigmaPRO.png';
+import publicSpaceDesign from '/assets/images/process/publicSpaceFigmaDS.png';
+import publicSpaceComponent from '/assets/images/process/publicSpaceFigmaCOMP.png';
 
 export const projects = [
   {
@@ -100,7 +100,7 @@ export const projects = [
     title: 'PUBLIC SPACE',
     description:
       'This Figma prototype and the React app of a dashboard built within the available 3 days. It includes a basic i18n setup on the Overview page to showcase multilingual support.',
-    tags: ['typescript', 'tailwind', 'html', 'css', 'language support'],
+    tags: ['react', 'typescript', 'tailwind', 'html', 'css', 'language support'],
     icons: [
       { src: figmaIcon, description: 'Figma' },
       { src: reactIcon, description: 'React Framework' },

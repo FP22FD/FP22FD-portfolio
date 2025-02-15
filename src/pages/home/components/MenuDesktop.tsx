@@ -1,8 +1,9 @@
 import { Link, NavLink } from 'react-router-dom';
 import Button from './Button';
-import logo from '../../../assets/images/logo.svg';
 import { handleContactClick, handleScroll } from '../utils/scrollUtils';
-import Flag from 'react-world-flags';
+import logo from '/assets/images/logo.svg';
+import FlagGb from 'svg-country-flags/svg/gb.svg';
+import FlagNo from 'svg-country-flags/svg/no.svg';
 
 export function MenuDesktop() {
   const pageLinks = [
@@ -10,13 +11,13 @@ export function MenuDesktop() {
     { label: 'Projects', to: '#projects' },
     {
       label: 'CV-en',
-      href: '/FP22FD-portfolio/fernanda-cv-en.pdf',
-      flag: 'GB',
+      href: '/FP22FD-portfolio/assets/cv/fernanda-cv-en.pdf',
+      flag: <img src={FlagGb} className="h-4 w-6 object-cover" aria-hidden="true" />,
     },
     {
       label: 'CV-no',
-      href: '/FP22FD-portfolio/fernanda-cv-no.pdf',
-      flag: 'NO',
+      href: '/FP22FD-portfolio/assets/cv/fernanda-cv-no.pdf',
+      flag: <img src={FlagNo} className="h-4 w-6 object-cover" aria-hidden="true" />,
     },
   ];
 
@@ -24,11 +25,7 @@ export function MenuDesktop() {
     <div className="hidden items-center justify-between md:flex">
       <div className="flex items-center text-primary-darkBlue">
         <Link to="#home" aria-label="Go to homepage">
-          <img
-            src={logo}
-            alt="Website logo"
-            className="h-auto w-8 duration-300 hover:rotate-[25deg] 2xl:w-9"
-          />
+          <img src={logo} alt="Website logo" className="h-auto w-8 duration-300 hover:rotate-[25deg] 2xl:w-9" />
         </Link>
         <h1 className="ml-4 text-xl font-bold 2xl:text-2xl">Fernanda Gomes</h1>
       </div>
@@ -44,14 +41,8 @@ export function MenuDesktop() {
               className="flex items-center gap-2 uppercase text-primary-darkBlue"
               aria-label={`Open ${label}`}
             >
-              <Flag
-                code={flag}
-                className="h-4 w-6 object-cover"
-                aria-hidden="true"
-              />
-              <span className="text-sm font-medium hover-underline">
-                {label}
-              </span>
+              {flag}
+              <span className="text-sm font-medium hover-underline">{label}</span>
             </a>
           ) : (
             <NavLink

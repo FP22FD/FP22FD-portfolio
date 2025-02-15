@@ -1,5 +1,5 @@
-import githubIcon from '/src/assets/icons/githubrounded.svg';
-import webIcon from '/src/assets/icons/web.svg';
+import githubIcon from '/assets/icons/githubrounded.svg';
+import webIcon from '/assets/icons/web.svg';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -28,14 +28,7 @@ interface Props {
 
 import { useState } from 'react';
 
-function ProjectCard({
-  title,
-  description,
-  icons,
-  githubLink,
-  websiteLink,
-  images,
-}: Props) {
+function ProjectCard({ title, description, icons, githubLink, websiteLink, images }: Props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string>('');
 
@@ -54,12 +47,7 @@ function ProjectCard({
 
       return (
         <a onClick={() => handleImageClick(image.src)}>
-          <img
-            src={image.src}
-            loading="lazy"
-            alt={`Thumbnail ${i + 1}`}
-            className="mt-2 h-16 object-cover"
-          />
+          <img src={image.src} loading="lazy" alt={`Thumbnail ${i + 1}`} className="mt-2 h-16 object-cover" />
         </a>
       );
     },
@@ -98,12 +86,7 @@ function ProjectCard({
           <div className="mb-4 flex gap-4">
             {icons.map((icon, index) => (
               <div key={index} className="group relative">
-                <img
-                  src={icon.src}
-                  loading="lazy"
-                  alt="Icon"
-                  className="h-6 w-6"
-                />
+                <img src={icon.src} loading="lazy" alt="Icon" className="h-6 w-6" />
                 <div className="absolute left-1/2 top-full z-10 hidden w-max -translate-x-1/2 rounded bg-neutral-default px-2 py-1 text-typography-grey opacity-0 transition-opacity duration-200 group-hover:block group-hover:opacity-100">
                   {icon.description}
                 </div>
@@ -116,12 +99,7 @@ function ProjectCard({
               target="_blank"
               className="flex items-center rounded border p-2 text-typography-grey hover:scale-105 hover:text-typography-default"
             >
-              <img
-                src={githubIcon}
-                loading="lazy"
-                alt="GitHub"
-                className="mr-2 h-6 w-6"
-              />
+              <img src={githubIcon} loading="lazy" alt="GitHub" className="mr-2 h-6 w-6" />
               <span>View More</span>
             </a>
             <a
@@ -129,12 +107,7 @@ function ProjectCard({
               target="_blank"
               className="flex items-center rounded border p-2 text-typography-grey hover:scale-105 hover:text-typography-default"
             >
-              <img
-                src={webIcon}
-                loading="lazy"
-                alt="Website"
-                className="mr-2 h-6 w-6"
-              />
+              <img src={webIcon} loading="lazy" alt="Website" className="mr-2 h-6 w-6" />
               <span>Live Demo</span>
             </a>
           </div>
@@ -145,9 +118,7 @@ function ProjectCard({
         <Slider {...sliderSettings}>
           {images.map((image, index) => (
             <div key={index} className="relative">
-              {image.description && (
-                <div className="text-right text-sm">{image.description}</div>
-              )}
+              {image.description && <div className="text-right text-sm">{image.description}</div>}
               <img
                 src={image.src}
                 loading="lazy"
@@ -160,9 +131,7 @@ function ProjectCard({
         </Slider>
       </div>
 
-      {isModalOpen && (
-        <Modal imageSrc={selectedImage} closeModal={handleCloseModal} />
-      )}
+      {isModalOpen && <Modal imageSrc={selectedImage} closeModal={handleCloseModal} />}
     </div>
   );
 }
@@ -178,18 +147,10 @@ const Modal = ({ imageSrc, closeModal }: ModalProps) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="relative w-4/5 max-w-4xl">
-        <button
-          className="absolute -top-10 right-0 rounded bg-white p-2 shadow hover:bg-gray-200"
-          onClick={closeModal}
-        >
+        <button className="absolute -top-10 right-0 rounded bg-white p-2 shadow hover:bg-gray-200" onClick={closeModal}>
           ✕
         </button>
-        <img
-          src={imageSrc}
-          loading="lazy"
-          alt="Enlarged project"
-          className="object-contain"
-        />
+        <img src={imageSrc} loading="lazy" alt="Enlarged project" className="object-contain" />
       </div>
     </div>
   );

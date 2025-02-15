@@ -1,28 +1,24 @@
-import { Link, NavLink } from 'react-router-dom'
-import { PiTextAlignJustifyLight, PiXLight } from 'react-icons/pi'
-import Button from './Button'
-import logo from '../../../assets/images/logo.svg'
+import { Link, NavLink } from 'react-router-dom';
+import { PiTextAlignJustifyLight, PiXLight } from 'react-icons/pi';
+import Button from './Button';
+import logo from '/assets/images/logo.svg';
 
 interface Props {
-  isMobileMenuOpen: boolean
-  toggleMobileMenu: () => void
+  isMobileMenuOpen: boolean;
+  toggleMobileMenu: () => void;
 }
 
 export function MenuMobile({ isMobileMenuOpen, toggleMobileMenu }: Props) {
   const pageLinks = [
     { label: 'Home', to: '#home' },
     { label: 'Projects', to: '#projects' },
-  ]
+  ];
 
   return (
-    <div className="text-primary-darkBlue flex w-full items-center justify-between md:hidden">
-      <div className="text-primary-darkBlue flex">
+    <div className="flex w-full items-center justify-between text-primary-darkBlue md:hidden">
+      <div className="flex text-primary-darkBlue">
         <Link to="/" aria-label="Go to homepage">
-          <img
-            src={logo}
-            alt="Website logo"
-            className="h-auto w-8 duration-300 hover:rotate-[25deg] 2xl:w-9"
-          />
+          <img src={logo} alt="Website logo" className="h-auto w-8 duration-300 hover:rotate-[25deg] 2xl:w-9" />
         </Link>
         <h1 className="ml-4 text-xl font-bold 2xl:text-2xl">Fernanda Gomes</h1>
       </div>
@@ -51,10 +47,7 @@ export function MenuMobile({ isMobileMenuOpen, toggleMobileMenu }: Props) {
         >
           <div className="flex justify-end p-6">
             <button onClick={toggleMobileMenu} aria-label="Close menu">
-              <PiXLight
-                className="text-primary-darkBlue h-6 w-6"
-                aria-hidden="true"
-              />
+              <PiXLight className="h-6 w-6 text-primary-darkBlue" aria-hidden="true" />
             </button>
           </div>
 
@@ -62,28 +55,17 @@ export function MenuMobile({ isMobileMenuOpen, toggleMobileMenu }: Props) {
 
           <nav className="my-8 flex flex-col items-center space-y-6">
             {pageLinks.map(({ label, to }) => (
-              <NavLink
-                key={label}
-                to={to}
-                className="uppercase hover-underline"
-                aria-label={`Go to ${label}`}
-              >
+              <NavLink key={label} to={to} className="uppercase hover-underline" aria-label={`Go to ${label}`}>
                 {label}
               </NavLink>
             ))}
           </nav>
 
           <div className="mt-auto place-self-center pb-8">
-            <Button
-              type="button"
-              label="CONTACT"
-              variant="primary"
-              ariaLabel="Contact me"
-              size="large"
-            />
+            <Button type="button" label="CONTACT" variant="primary" ariaLabel="Contact me" size="large" />
           </div>
         </div>
       )}
     </div>
-  )
+  );
 }

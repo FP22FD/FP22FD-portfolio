@@ -1,6 +1,6 @@
-import profile from '/src/assets/images/profile.png';
-import linkedin from '/src/assets/icons/linkedin.svg';
-import github from '/src/assets/icons/github.svg';
+import profile from '/assets/images/profile.png';
+import linkedin from '/assets/icons/linkedin.svg';
+import github from '/assets/icons/github.svg';
 
 function FeaturedCard() {
   return (
@@ -18,9 +18,7 @@ function FeaturedCard() {
 
         <div className="flex h-full w-full flex-col place-content-center">
           <div className="md:text-md text-center text-sm sm:space-y-4 sm:p-4 md:text-base lg:mb-2">
-            <h2 className="text-lg font-bold sm:text-2xl md:text-3xl">
-              Fernanda Gomes
-            </h2>
+            <h2 className="text-lg font-bold sm:text-2xl md:text-3xl">Fernanda Gomes</h2>
             <p className="text-nowrap">Front-End Developer</p>
             <p>Oslo, Norway</p>
             <div className="mt-4 flex place-items-center justify-center gap-4">
