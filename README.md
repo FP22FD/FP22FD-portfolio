@@ -114,9 +114,7 @@ Ensure the following tools are installed on your system:
    npn run deploy
    ```
 
-## New Improvements
-
-### Hotjar Integration
+## New Improvements: Hotjar Integration
 
 This portfolio website includes [Hotjar](https://www.hotjar.com/) integration to enhance user experience tracking and analysis.  
 Hotjar allows us to:
@@ -125,13 +123,13 @@ Hotjar allows us to:
 - Collect Feedback: Identify usability issues and improve the design iteratively.
 - Heatmaps and Session Recordings: Gain insights into user navigation patterns.
 
-#### How It Works
+### How It Works
 
 - The Hotjar script is implemented globally in the project via a `Hotjar` React component.
 - This component initializes Hotjar with a unique `hjid` (Hotjar ID) to connect it to the account.
 - It is included at the root of the application, ensuring it tracks user activity on all pages.
 
-#### How to Replace the Hotjar ID
+### How to Replace the Hotjar ID
 
 1. Open the `Hotjar.tsx` file in `src/components`.
 2. Replace `5259025` with the unique ID provided by your Hotjar account.
@@ -140,11 +138,13 @@ Hotjar allows us to:
 h._hjSettings = { hjid: YOUR_HOTJAR_ID, hjsv: 6 };
 ```
 
-### Vite Bundle Visualizer
+## New Improvements: Bundle size Performance
+
+1️⃣ Uso do Vite Bundle Visualizer
+The `npx vite-bundle-visualizer` command is used to visualize the size and contents of the bundles produced during the build process.
+It helps identify which packages take up the most space, allowing optimization of the application load time by splitting bundles or removing unnecessary dependencies.
 
 The `npx vite-bundle-visualizer` command is a tool that generates a graphical visualization of the size and contents of the bundles produced by Vite during the build process. It is useful for identifying which packages are taking up the most space, allowing for optimization of the application load time, either by splitting the bundles or removing unnecessary dependencies.
-
-#### How to Use
 
 1. Run the following command in the terminal:
 
@@ -152,12 +152,28 @@ The `npx vite-bundle-visualizer` command is a tool that generates a graphical vi
    npx vite-bundle-visualizer
 ```
 
-#### Substitution of `react-world-flags` with `svg-country-flags`
+2️⃣ Uso de Suspense e lazy
+This allows certain components to be loaded on demand rather than at initial load.  
+Result: Less code in the initial bundle, faster loading, and better performance.
+
+In the application, `Suspense` and `lazy` are used in the router to load components on demand instead of loading them at the initial page load.
+This helps to improve performance by reducing the initial bundle size.
+
+3️⃣ Placing images and icons in the public folder
+Static files like images and icons are served directly by the server, without being processed by the bundler.  
+Result: Better caching, shorter build times, and smaller final bundle size.
+
+- public/
+  - logo.png (Served directly by the server)
+- src/
+  - assets/
+    - logo.png (Bundled by the bundler)
+
+4️⃣ Importing only the necessary parts of a large package
+Instead of importing an entire heavy package, you choose only the small module you need.
 
 The `react-world-flags` package has been replaced with `svg-country-flags` in this project.
 Unlike the previous package, `svg-country-flags` allows for a more modular approach where you can import only the specific flag(s) you need, reducing the bundle size.
-
-#### How to Use `svg-country-flags`
 
 Instead of importing the entire package, you can import specific flags individually to keep your bundle optimized. Follow these steps:
 
