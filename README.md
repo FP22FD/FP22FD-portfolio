@@ -185,6 +185,10 @@ Instead of importing the entire package, you can import specific flags individua
 
 ## Resource
 
-Icons: [React Icons](https://react-icons.github.io/react-icons/icons/pi/)
-Images: [Image size optimization](https://tinypng.com/)
-The Open Graph protocol: [mdn metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
+- Icons: [React Icons](https://react-icons.github.io/react-icons/icons/pi/)
+- SVG: [Editing SVG files](https://www.svgviewer.dev/)
+- Images: [Image size optimization](https://tinypng.com/)
+- The Open Graph protocol: [MDN metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
+- Accessibility: [a11y](https://www.a11yproject.com/)
+- Accessibility: [WCAG 2.1](https://www.w3.org/TR/WCAG21/)
+- Accessibility: [WAVE](https://wave.webaim.org/sitewide)
