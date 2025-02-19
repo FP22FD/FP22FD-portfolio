@@ -7,24 +7,23 @@ function AboutAndSkillsCard() {
         <h2 className="mb-2 text-xl font-bold">ABOUT ME</h2>
         <p>Hi there!</p>
         <p>
-          I'm motivated front-end developer based in Oslo, Norway. My tech stack
-          is React, TypeScript, semantic and accessible HTML, modern CSS,
-          JavaScript, Bootstrap, Tailwind, UI/UX, CI/CD, unit/e2e testing, and
-          Figma prototyping.
+          I'm motivated front-end developer based in Oslo, Norway, with a strong focus on resposnive design,
+          accessibility (WCAG 2.1, a11y), and user-friendly interfaces. My tech stack includes React, TypeScript, modern
+          CSS (Tailwind, Bootstrap), semantic and accessible HTML, JavaScript, UI/UX principles, and CI/CD workflows. I
+          have experience working with Figma prototyping and a keen interest in SEO, performance optimization, and
+          usability testing.
         </p>
         <p>
-          I enjoy focusing on the creative side of a project, believing that
-          fonts, colors, and spaces should work harmoniously. I also appreciate
-          the technical aspects of design, bringing ideas to life through code.
+          I enjoy focusing on the creative side of a project, believing that fonts, colors, and spaces should work
+          harmoniously. I also appreciate the technical aspects of design, bringing ideas to life through code.
         </p>
 
         <p>
-          I'm passionate about exploring a wide range of interests, including
-          SEO, video editing, photography, OBS Studio, and YouTube.
+          I'm passionate about exploring a wide range of interests, including SEO, video editing, photography, OBS
+          Studio, and YouTube content creation.
         </p>
         <p>
-          In the past I developed a love for creating handmade craft patterns,
-          and today I still sell them through my
+          In the past I developed a love for creating handmade craft patterns, and today I still sell them through my
           <a
             href="https://www.etsy.com/it/shop/FernandasCraftRoom"
             target="_blank"

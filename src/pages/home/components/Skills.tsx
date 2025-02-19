@@ -27,6 +27,8 @@ import flywheel from '/assets/icons/flywheel.png';
 import i18Next from '/assets/icons/i18next.svg';
 import vue3 from '/assets/icons/vue.svg';
 import i18n from '/assets/icons/i18n.svg';
+import w3c from '/assets/icons/w3c.svg';
+import accessibility from '/assets/icons/a11y.svg';
 
 function Skills() {
   return (
@@ -56,6 +58,8 @@ function Skills() {
           { src: wordpress, alt: 'WordPress', label: 'WordPress' },
           { src: flywheel, alt: 'Flywheel', label: 'Local' },
           { src: ux, alt: 'UX-UI', label: 'UX - UI' },
+          { src: w3c, alt: 'W3C', label: 'WCAG 2.1' },
+          { src: accessibility, alt: 'Accessibility', label: 'a11y' },
           { src: database, alt: 'API', label: 'API' },
           { src: netlify, alt: 'Netlify', label: 'Netlify' },
           { src: i18n, alt: 'i18n', label: 'i18n' },
@@ -65,8 +69,8 @@ function Skills() {
           { src: storybook, alt: 'Storybook', label: 'Storybook' },
         ].map((skill, index) => (
           <div key={index} className="flex flex-col items-center rounded border p-2 text-center">
-            <img src={skill.src} alt={`icon ${skill.alt}`} className="mb-0 h-6 w-6 sm:h-8 sm:w-8 lg:mb-1" />
-            <span className="text-xs">{skill.label}</span>
+            <img src={skill.src} alt={`icon ${skill.alt}`} className="mb-0 h-6 w-6 sm:h-8 sm:w-10 lg:mb-1" />
+            <span className="text-[10px] xxl:text-xs">{skill.label}</span>
           </div>
         ))}
       </div>
