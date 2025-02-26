@@ -12,12 +12,26 @@ export function MenuDesktop() {
     {
       label: 'CV-en',
       href: '/FP22FD-portfolio/assets/cv/fernanda-cv-en.pdf',
-      flag: <img src={FlagGb} className="h-4 w-6 object-cover" aria-hidden="true" />,
+      flag: (
+        <img
+          src={FlagGb}
+          alt="UK flag representing English language option"
+          className="h-4 w-6 object-cover"
+          aria-hidden="true"
+        />
+      ),
     },
     {
       label: 'CV-no',
       href: '/FP22FD-portfolio/assets/cv/fernanda-cv-no.pdf',
-      flag: <img src={FlagNo} className="h-4 w-6 object-cover" aria-hidden="true" />,
+      flag: (
+        <img
+          src={FlagNo}
+          alt="NO flag representing Norwegian language option"
+          className="h-4 w-6 object-cover"
+          aria-hidden="true"
+        />
+      ),
     },
   ];
 
