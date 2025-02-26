@@ -30,6 +30,38 @@ import publicSpaceComponent from '/assets/images/process/publicSpaceFigmaCOMP.pn
 
 export const projects = [
   {
+    title: 'PUBLIC SPACE',
+    description:
+      'This Figma prototype is a dashboard built within the 3 days available with React. It includes a basic i18n setup on the Overview page to showcase multilingual support.',
+    tags: [
+      'react',
+      'typescript',
+      'tailwind',
+      'html',
+      'css',
+      'language support',
+      'case study',
+    ],
+    icons: [
+      { src: figmaIcon, description: 'Figma' },
+      { src: reactIcon, description: 'React Framework' },
+      { src: i18NextIcon, description: 'i18Next Library' },
+      { src: i18nIcon, description: 'i18n Language Support' },
+      { src: tailwindIcon, description: 'Tailwind CSS' },
+      { src: typescriptIcon, description: 'Typescript' },
+      { src: htmlIcon, description: 'HTML' },
+      { src: cssIcon, description: 'CSS' },
+    ],
+    githubLink: 'https://github.com/FP22FD/dashboard-public-space',
+    websiteLink: 'https://dashboard-public-space.netlify.app/',
+    imageSrc: [
+      { src: publicSpace, description: 'Project Implemented | Live Demo' },
+      { src: publicSpaceDesign, description: 'Design System | Figma' },
+      { src: publicSpacePrototype, description: 'Prototype | Figma' },
+      { src: publicSpaceComponent, description: 'Reusable Components | Figma' },
+    ],
+  },
+  {
     title: 'HOLIDAZE BOOKING',
     description:
       'This is Project Exam 2 assignment. Holidaze Booking is a booking site for hotels, cabins, etc., where registered users can book accommodations and manage their bookings, while admins can manage accommodations and bookings.',
@@ -43,7 +75,8 @@ export const projects = [
       { src: htmlIcon, description: 'HTML' },
       { src: cssIcon, description: 'CSS' },
     ],
-    githubLink: 'https://github.com/FP22FD/holidaze-booking/blob/main/README.md',
+    githubLink:
+      'https://github.com/FP22FD/holidaze-booking/blob/main/README.md',
     websiteLink: 'https://holidaze-booking-ca.netlify.app/',
     imageSrc: [
       { src: holidaze, description: 'Project Implemented | Live Demo' },
@@ -88,7 +121,8 @@ export const projects = [
       { src: htmlIcon, description: 'HTML' },
       { src: cssIcon, description: 'CSS' },
     ],
-    githubLink: 'https://github.com/FP22FD/Auction-House-SP2-CA/blob/main/README.md',
+    githubLink:
+      'https://github.com/FP22FD/Auction-House-SP2-CA/blob/main/README.md',
     websiteLink: 'https://fp22fd.github.io/Auction-House-SP2-CA/',
     imageSrc: [
       { src: auction, description: 'Project Implemented | Live Demo' },
@@ -96,40 +130,19 @@ export const projects = [
       { src: auctionPrototype, description: 'Prototype | Figma' },
     ],
   },
-  {
-    title: 'PUBLIC SPACE',
-    description:
-      'This Figma prototype and the React app of a dashboard built within the available 3 days. It includes a basic i18n setup on the Overview page to showcase multilingual support.',
-    tags: ['react', 'typescript', 'tailwind', 'html', 'css', 'language support'],
-    icons: [
-      { src: figmaIcon, description: 'Figma' },
-      { src: reactIcon, description: 'React Framework' },
-      { src: i18NextIcon, description: 'i18Next Library' },
-      { src: i18nIcon, description: 'i18n Language Support' },
-      { src: tailwindIcon, description: 'Tailwind CSS' },
-      { src: typescriptIcon, description: 'Typecript' },
-      { src: htmlIcon, description: 'HTML' },
-      { src: cssIcon, description: 'CSS' },
-    ],
-    githubLink: 'https://github.com/FP22FD/dashboard-public-space',
-    websiteLink: 'https://dashboard-public-space.netlify.app/',
-    imageSrc: [
-      { src: publicSpace, description: 'Project Implemented | Live Demo' },
-      { src: publicSpaceDesign, description: 'Design System | Figma' },
-      { src: publicSpacePrototype, description: 'Prototype | Figma' },
-      { src: publicSpaceComponent, description: 'Reusable Components | Figma' },
-    ],
-  },
 ];
 
 function ProjectsSection() {
   const [filter, setFilter] = useState('all');
 
-  const filteredProjects = filter === 'all' ? projects : projects.filter((project) => project.tags.includes(filter));
+  const filteredProjects =
+    filter === 'all'
+      ? projects
+      : projects.filter((project) => project.tags.includes(filter));
 
   return (
-    <section className="mt-16 w-full gap-2 text-right text-xs lg:text-sm">
-      <div className="mb-2 grid grid-cols-3 place-items-start gap-y-2 text-primary-darkBlue sm:grid-cols-4 sm:place-items-end md:flex md:place-content-end">
+    <section className='mt-16 w-full gap-2 text-right text-xs lg:text-sm'>
+      <div className='mb-2 grid grid-cols-3 place-items-start gap-y-2 text-primary-darkBlue sm:grid-cols-4 sm:place-items-end md:flex md:place-content-end'>
         {[
           'all',
           'react',
@@ -140,6 +153,7 @@ function ProjectsSection() {
           'unit test',
           'cypress',
           'language support',
+          'case study',
         ].map((tag) => (
           <button
             key={tag}
@@ -156,14 +170,15 @@ function ProjectsSection() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xxl:grid-cols-3">
+      <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 xxl:grid-cols-3'>
         {filteredProjects.map((project) => (
           <ProjectCard
             key={project.title}
             title={project.title}
             description={project.description}
             icons={(project.icons ?? []).filter(
-              (icon): icon is { src: string; description: string } => icon !== undefined,
+              (icon): icon is { src: string; description: string } =>
+                icon !== undefined
             )}
             githubLink={project.githubLink}
             websiteLink={project.websiteLink}
