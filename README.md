@@ -188,6 +188,7 @@ Instead of importing the entire package, you can import specific flags individua
 - Icons: [React Icons](https://react-icons.github.io/react-icons/icons/pi/)
 - SVG: [Editing SVG files](https://www.svgviewer.dev/)
 - Images: [Image size optimization](https://tinypng.com/)
+- Tailwind CSS Color Generation: [uicolors](https://uicolors.app/create)
 - The Open Graph protocol: [MDN metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
 - Accessibility: [a11y](https://www.a11yproject.com/)
 - Accessibility: [WCAG 2.1](https://www.w3.org/TR/WCAG21/)
