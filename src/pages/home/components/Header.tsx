@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import { MenuMobile } from './MenuMobile'
-import { MenuDesktop } from './MenuDesktop'
+import { useState } from 'react';
+import { MenuMobile } from './MenuMobile';
+import { MenuDesktop } from './MenuDesktop';
 
 function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prev) => !prev)
-  }
+    setIsMobileMenuOpen((prev) => !prev);
+  };
 
   return (
     <header className="fixed left-0 top-0 z-40 w-full bg-neutral-ofWhite shadow-sm">
@@ -17,14 +17,11 @@ function Header() {
         </div>
 
         <div className="w-full md:hidden">
-          <MenuMobile
-            isMobileMenuOpen={isMobileMenuOpen}
-            toggleMobileMenu={toggleMobileMenu}
-          />
+          <MenuMobile isMobileMenuOpen={isMobileMenuOpen} toggleMobileMenu={toggleMobileMenu} />
         </div>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
