@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import { fontFamily } from 'tailwindcss/defaultTheme'
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -22,8 +22,7 @@ module.exports = {
           lightBlue: '#E7F5F9',
           darkBlue: '#014361',
           lightPurple: '#CEB8D7',
-          lightPurple: '#801EE0',
-
+          darkPurple: '#801EE0',
         },
         typography: {
           default: '#212427',
@@ -66,14 +65,14 @@ module.exports = {
             src: 'url("/assets/fonts/Lora/Lora-regular.ttf") format("TrueType")',
           },
         ],
-      })
+      });
 
       addBase({
         'h1, h2, h3, h4, h5': {
           fontFamily: 'Playfair Display, Arial, Helvetica, sans-serif',
         },
         body: { fontFamily: 'Lora, Verdana, Tahoma, sans-serif' },
-      })
+      });
     },
     function ({ addComponents }) {
       addComponents({
@@ -84,13 +83,12 @@ module.exports = {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: '0% 100%',
           transition: 'background-size 0.3s ease-out',
-          backgroundImage:
-            'linear-gradient(90deg, rgb(206, 184, 215), rgb(206, 184, 215))',
+          backgroundImage: 'linear-gradient(90deg, rgb(206, 184, 215), rgb(206, 184, 215))',
         },
         '.highlight:hover': {
           backgroundSize: '100% 20px',
         },
-      })
+      });
     },
     function ({ addUtilities }) {
       addUtilities(
@@ -106,7 +104,7 @@ module.exports = {
               left: 0,
               width: '100%',
               height: '2px',
-              backgroundImage: 'linear-gradient(90deg, #801EE0, #801EE0)',
+              backgroundImage: 'linear-gradient(90deg, #AADCEC, #014361)',
               backgroundRepeat: 'no-repeat',
               backgroundSize: '0 100%',
               transition: 'background-size 0.3s ease-out',
@@ -117,7 +115,7 @@ module.exports = {
           },
         },
         ['responsive', 'hover'],
-      )
+      );
     },
   ],
-}
+};
