@@ -58,27 +58,38 @@ function AboutAndSkillsCard() {
             {txtAbout}
 
             <p>
-              I enjoy focusing on the creative side of a project, believing that
-              fonts, colors, and spaces should work harmoniously. I also
-              appreciate the technical aspects of design, bringing ideas to life
-              through code.
+              I'm a developer who taught himself Norwegian and English before
+              completing a 2 years vocational education as a Front-end developer
+              in 2025 with grade A. Now I am participating in a further
+              education program through{' '}
+              <span className='highlight'>Glasspaper</span> Academy.
             </p>
             <p>
-              I'm passionate about exploring a wide range of interests,
-              including video editing, photography, OBS Studio, and YouTube
-              content creation.
+              Here I am sharpening my Front-end competence and acquiring
+              additional skills within Back-end development, AI development and
+              cloud solutions. My technology stack is React, TypeScript, modern
+              CSS (Tailwind, Bootstrap), semantic and accessible HTML,
+              JavaScript, UI/UX principles and CI/CD workflows, as well as C# /
+              .NET and Azure. I have experience with Figma prototyping and a
+              strong interest in SEO, performance optimization and usability.
             </p>
             <p>
-              In the past, I developed a love for creating handmade craft
-              patterns, and today I still sell them through my
+              I thrive on the creative side of design, where fonts, colors and
+              spaces should work harmoniously. I always put the end user first
+              and ensure good Universal Design. At the same time, I enjoy the
+              technical aspects and realizing ideas through code.
+            </p>
+            <p>
+              Discover how I'm leveling up my coding skills and building real
+              projects on GitHub
               <a
-                href='https://www.etsy.com/it/shop/FernandasCraftRoom'
+                href=' https://github.com/FP22FD'
                 target='_blank'
                 rel='noopener noreferrer'
-                aria-label='Visit My Etsy Store'
+                aria-label='Explore my coding journey on GitHub'
                 className='highlight ml-2 hover:font-bold'
               >
-                digital Store
+                here
               </a>
               .
             </p>
