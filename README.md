@@ -81,6 +81,8 @@ Ensure the following tools are installed on your system:
 
 ### Deploying to GitHub Pages
 
+Important: Every time you make changes to the project, you must run `npm run build` before committing and pushing. GitHub Pages only publishes the generated build files, not the source code.
+
 1. Open the Settings of this repository on GitHub.
 2. Go to Pages under the Code and Automation tab.
 3. Select the gh-pages (or main) branch and the /root directory for deployment.
@@ -111,7 +113,7 @@ Ensure the following tools are installed on your system:
 
    ```bash
    npm run predeploy
-   npn run deploy
+   npm run deploy
    ```
 
 ## New Improvements: Hotjar Integration
