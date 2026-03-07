@@ -53,7 +53,7 @@ export const projects = [
       { src: cssIcon, description: 'CSS' },
     ],
     githubLink: 'https://github.com/FP22FD/dashboard-public-space',
-    websiteLink: 'https://dashboard-public-space.netlify.app/',
+    websiteLink: 'https://dashboard-public-space-view.netlify.app/',
     imageSrc: [
       { src: publicSpace, description: 'Project Implemented | Live Demo' },
       { src: publicSpaceDesign, description: 'Design System | Figma' },
@@ -77,7 +77,7 @@ export const projects = [
     ],
     githubLink:
       'https://github.com/FP22FD/holidaze-booking/blob/main/README.md',
-    websiteLink: 'https://holidaze-booking-ca.netlify.app/',
+    websiteLink: 'https://holidaze-booking-ca2.netlify.app/',
     imageSrc: [
       { src: holidaze, description: 'Project Implemented | Live Demo' },
       { src: holidazeDesign, description: 'Design System | Figma' },
@@ -101,7 +101,7 @@ export const projects = [
       { src: cssIcon, description: 'CSS' },
     ],
     githubLink: 'https://github.com/FP22FD/online-shop-CA/blob/main/README.md',
-    websiteLink: 'https://onlineshop-ca.netlify.app/',
+    websiteLink: 'https://onlineshop-view.netlify.app/',
     imageSrc: [
       { src: online, description: 'Project Implemented | Live Demo' },
       { src: postmanOnline, description: 'Postman | API' },
