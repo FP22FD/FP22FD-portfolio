@@ -32,9 +32,9 @@ import accessibility from '/assets/icons/a11y.svg';
 
 function Skills() {
   return (
-    <section className="rounded bg-neutral-ofWhite p-4 text-primary-darkBlue">
-      <h3 className="mb-4 text-left text-lg font-bold">SKILLS</h3>
-      <div className="grid grid-cols-3 gap-2 text-nowrap sm:grid-cols-4 md:grid-cols-8 xl:grid-cols-10">
+    <section className='rounded bg-neutral-ofWhite p-4 text-primary-darkBlue'>
+      <h3 className='mb-4 text-left text-lg font-bold'>SKILLS</h3>
+      <div className='grid grid-cols-3 gap-2 text-nowrap sm:grid-cols-4 md:grid-cols-8 xl:grid-cols-10'>
         {[
           { src: react, alt: 'React', label: 'React' },
           { src: javascript, alt: 'JavaScript', label: 'JavaScript' },
@@ -68,9 +68,16 @@ function Skills() {
           { src: sql, alt: 'SQL', label: 'SQL' },
           { src: storybook, alt: 'Storybook', label: 'Storybook' },
         ].map((skill, index) => (
-          <div key={index} className="flex flex-col items-center rounded border p-2 text-center">
-            <img src={skill.src} alt={`icon ${skill.alt}`} className="mb-0 h-6 w-6 sm:h-8 sm:w-10 lg:mb-1" />
-            <span className="text-[10px] xxl:text-xs">{skill.label}</span>
+          <div
+            key={index}
+            className='flex flex-col items-center rounded border p-2 text-center'
+          >
+            <img
+              src={skill.src}
+              alt={`icon ${skill.alt}`}
+              className='mb-0 h-6 w-6 sm:h-8 sm:w-10 lg:mb-1'
+            />
+            <span className='text-[10px] xxl:text-xs'>{skill.label}</span>
           </div>
         ))}
       </div>
