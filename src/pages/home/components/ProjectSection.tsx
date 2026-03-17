@@ -27,8 +27,56 @@ import publicSpace from '/assets/images/process/publicSpace.png';
 import publicSpacePrototype from '/assets/images/process/publicSpaceFigmaPRO.png';
 import publicSpaceDesign from '/assets/images/process/publicSpaceFigmaDS.png';
 import publicSpaceComponent from '/assets/images/process/publicSpaceFigmaCOMP.png';
+import expressapi from '/assets/images/process/expressapi.png';
+import expressscalerui from '/assets/images/process/expressscalerui.png';
+import expressprogram from '/assets/images/process/expressprogram.png';
+import expressbookservice from '/assets/images/process/expressbookservice.png';
 
 export const projects = [
+  {
+    title: 'ASP.NET Core w/ Minimal Api | C#',
+    description:
+      'PostreSql code-first REST API (Minimal Api) built in C# with Asp.net Core and Entity Framework Core. The project focuses on ORM mindset, clean architecture, pattern and best practices. Other keywords: Dependency Injection, console application (Google Books Importer), Docker Compose, Scalar (OpenAPI).',
+    tags: ['c#', 'backend', 'postgres'],
+    icons: [],
+    githubLink: 'https://github.com/FP22FD/Book-Library-Project',
+    websiteLink: '',
+    imageSrc: [
+      { src: expressscalerui, description: 'Express API | Project Overview' },
+      {
+        src: expressprogram,
+        description: 'Backend Structure | Node.js + Express',
+      },
+      {
+        src: expressbookservice,
+        description: 'Book Service | API Endpoint Example',
+      },
+    ],
+  },
+  {
+    title: 'EXPRESS API',
+    description:
+      'Azure Sql Server database-first REST API built with Node.js and Express. The project focuses on SQL, clean architecture, modular routing, middleware handling, and scalable server-side development. Other keywords: Typescript, Azure Blob Storage, Shared Access Signatures (SAS), Sql Server Management Studio, TSOA, Swagger (OpenAPI).',
+    tags: [
+      'node.js',
+      'express',
+      'rest api',
+      'backend',
+      'typescript',
+      'http server',
+    ],
+    icons: [
+      // { src: nodeIcon, description: 'Node.js Runtime' },
+      // { src: expressIcon, description: 'Express Framework' },
+      // { src: javascriptIcon, description: 'JavaScript' },
+      // { src: apiIcon, description: 'REST API' },
+    ],
+    githubLink: 'https://github.com/FP22FD/express',
+    websiteLink: '',
+    imageSrc: [
+      { src: expressapi, description: 'Express Swagger | Project Overview' },
+    ],
+  },
   {
     title: 'PUBLIC SPACE',
     description:
