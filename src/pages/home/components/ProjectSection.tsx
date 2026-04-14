@@ -115,17 +115,14 @@ export const projects = [
       {
         src: dashnextjs1,
         description: 'Book Library App | UI Overview',
-        fit: 'contain',
       },
       {
         src: dashnextjs2,
         description: 'Book Library App | UI Details',
-        fit: 'contain',
       },
       {
         src: dashnextjs3,
         description: 'Book Library App | UI Details',
-        fit: 'contain',
       },
     ],
   },

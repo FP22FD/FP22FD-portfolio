@@ -14,7 +14,7 @@ interface Icon {
 interface ImageType {
   src: string;
   description: string;
-  fit?: 'cover' | 'contain';
+  // fit?: 'cover' | 'contain';
 }
 
 interface Props {
@@ -153,7 +153,7 @@ function ProjectCard({
                 src={image.src}
                 loading='lazy'
                 alt={`Project Thumbnail ${title}`}
-                className={`h-72 w-full cursor-pointer rounded object-${image.fit || 'cover'}`}
+                className='h-72 w-full cursor-pointer rounded object-cover'
                 onClick={() => handleImageClick(image.src)}
               />
             </div>
