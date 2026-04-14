@@ -12,6 +12,8 @@ import typescriptIcon from '/assets/icons/typescriptgreen.svg';
 import i18NextIcon from '/assets/icons/i18nextgreen.svg';
 import i18nIcon from '/assets/icons/i18ngreen.svg';
 import figmaIcon from '/assets/icons/figmagreen.svg';
+import nextjsIcon from '/assets/icons/nextjs.svg';
+import claudeIcon from '/assets/icons/claude.svg';
 import holidaze from '/assets/images/process/holidazebooking.png';
 import holidazeDesign from '/assets/images/process/holidazeFigmaDS.png';
 import holidazePrototype from '/assets/images/process/holidazeFigmaPRO.png';
@@ -31,6 +33,9 @@ import expressapi from '/assets/images/process/expressapi.png';
 import expressscalerui from '/assets/images/process/expressscalerui.png';
 import expressprogram from '/assets/images/process/expressprogram.png';
 import expressbookservice from '/assets/images/process/expressbookservice.png';
+import dashnextjs1 from '/assets/images/process/dashnextjs1.png';
+import dashnextjs2 from '/assets/images/process/dashnextjs2.png';
+import dashnextjs3 from '/assets/images/process/dashnextjs3.png';
 
 export const projects = [
   {
@@ -75,6 +80,53 @@ export const projects = [
     websiteLink: '',
     imageSrc: [
       { src: expressapi, description: 'Express Swagger | Project Overview' },
+    ],
+  },
+  {
+    title: 'BOOK LIBRARY APP',
+    description:
+      'Modern front-end application built with TypeScript, Next.js, and Tailwind CSS. An AI-assisted redesign was used to support the UI design process, including layout exploration and visual consistency.',
+
+    tags: [
+      'next.js',
+      'react',
+      'frontend',
+      'tailwind css',
+      'typescript',
+      'ui design',
+      'responsive design',
+    ],
+
+    icons: [
+      { src: nextjsIcon, description: 'Next.js Framework' },
+      { src: reactIcon, description: 'React' },
+      { src: claudeIcon, description: 'Claude AI' },
+      { src: tailwindIcon, description: 'Tailwind CSS' },
+      { src: typescriptIcon, description: 'TypeScript' },
+      { src: htmlIcon, description: 'HTML' },
+      { src: cssIcon, description: 'CSS' },
+    ],
+
+    githubLink: 'https://github.com/FP22FD/nextjs-dashboard-example',
+    websiteLink:
+      'https://nextjs-dashboard-example-pgk5r94ok-fp22fds-projects.vercel.app/',
+
+    imageSrc: [
+      {
+        src: dashnextjs1,
+        description: 'Book Library App | UI Overview',
+        fit: 'contain',
+      },
+      {
+        src: dashnextjs2,
+        description: 'Book Library App | UI Details',
+        fit: 'contain',
+      },
+      {
+        src: dashnextjs3,
+        description: 'Book Library App | UI Details',
+        fit: 'contain',
+      },
     ],
   },
   {
